@@ -14,6 +14,9 @@ module.exports = {
         },
         black: "#111827",
       },
+      transitionProperty: {
+        width: "width",
+      },
     },
   },
   plugins: [],

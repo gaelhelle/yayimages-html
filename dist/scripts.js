@@ -5,6 +5,8 @@ const toggleSection = (section) => {
     accordion.classList.toggle("open");
     section.style.opacity = "0";
     section.classList.toggle("hidden");
+    section.classList.toggle("duration-500");
+    section.classList.toggle("transition");
     if (!section.classList.contains("hidden")) {
         section.style.maxHeight = section.scrollHeight + "px";
         section.style.opacity = "1";
@@ -46,12 +48,12 @@ let resizeTimer;
 const windowResize = () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-        if (window.innerWidth < 768) {
-            subScribeAccordion();
-        }
-        else {
-            unsubScribeAccordion();
-        }
+        subScribeAccordion();
+        // if (window.innerWidth < 768) {
+        //   subScribeAccordionMobile();
+        // } else {
+        //   subScribeAccordionMobile();
+        // }
     }, 200);
 };
 windowResize();
@@ -67,6 +69,13 @@ const buttonsMenuMobile = document.querySelectorAll(".toggle-menu-mobile");
 for (const buttonMenuMobile of buttonsMenuMobile) {
     buttonMenuMobile.addEventListener("click", handleToggleMenuMobile);
 }
+// Closing sidebar search
+const sidebarButton = document.querySelector(".toggle-filter-sidebar");
+const handleToggleSidebarSearch = () => {
+    const sidebar = document.querySelector(".sidebar-search");
+    sidebar.classList.toggle("closed");
+};
+sidebarButton.addEventListener("click", handleToggleSidebarSearch);
 // Closing stuff
 window.addEventListener("click", function (event) {
     const headerSearchbar = document.querySelector(".header-searchbar");

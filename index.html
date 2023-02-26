@@ -16,10 +16,10 @@
   </head>
   <body>
     <div>
-      <header class="">
+      <header class="sticky top-0 bg-white z-10">
         <div class="shadow-lg md:py-6 border-b border-brand-xl-lightgray">
           <div
-            class="flex justify-between items-center gap-8 max-w-[1536px] px-[2rem] mx-auto max-md:min-h-[72px]"
+            class="flex justify-between items-center gap-8 container px-[2rem] mx-auto max-md:min-h-[72px]"
           >
             <div class="mr-4 header-logo">
               <a href="/">
@@ -116,8 +116,206 @@
         </div>
       </header>
       <main>
-        <div class="h-full flex items-center justify-center text-black/20">
-          Main
+        <div class="page-with-sidebar open flex">
+          <aside
+            class="group sidebar-search flex flex-1 relative top-0 bg-white"
+          >
+            <button
+              class="toggle-filter-sidebar bg-black rounded-r-lg absolute z-[2] top-6 left-full h-11 w-9 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="./assets/img/icons/arrow-down-white.svg"
+                alt="Icon Arrow"
+                class="rotate-90 group-[.closed]:-rotate-90"
+              />
+            </button>
+            <div
+              class="sidebar-search-inner flex flex-col rounded-tr-lg [.open_&]:w-[30vw] min-w-[270px] max-w-[400px] group-[.closed]:hidden"
+            >
+              <div
+                class="sticky top-[97px] rounded-tr-lg border-2 border-black border-l-0 border-b-0"
+              >
+                <div
+                  class="flex items-center gap-6 justify-between text-xl pl-16 px-8 py-6 border-b-2 border-black"
+                >
+                  <div class="flex gap-6">
+                    <img
+                      src="./assets/img/icons/filters.svg"
+                      alt="Icon Filters"
+                    />
+                    Filters
+                  </div>
+                  <button
+                    class="text-brand-body1 text-sm cursor-pointer hover:underline"
+                  >
+                    Clear
+                  </button>
+                </div>
+                <ul class="divide-y-2 divide-black border-b-2 border-black">
+                  <li class="hover:bg-brand-xl-lightgray transition">
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer group"
+                      data-toggle="collapse"
+                      data-target="#filter-tier"
+                    >
+                      Tier
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                        class="group-[.open]:rotate-180"
+                      />
+                    </button>
+                    <div id="filter-tier" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li class="hover:bg-brand-xl-lightgray transition">
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-media-type"
+                    >
+                      Media Type
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-media-type" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-orientation"
+                    >
+                      Orientation
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-orientation" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-people"
+                    >
+                      People
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-people" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-color"
+                    >
+                      Color
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-color" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-exclude-keywords"
+                    >
+                      Exclude Keywords
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div
+                      id="filter-exclude-keywords"
+                      class="hidden pl-16 px-8 pb-6"
+                    >
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-text-space"
+                    >
+                      Text Space
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-text-space" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-username"
+                    >
+                      Username
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-username" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
+                      data-toggle="collapse"
+                      data-target="#filter-date-added"
+                    >
+                      Date Added
+                      <img
+                        src="./assets/img/icons/arrow-down-black.svg"
+                        alt="Icon Arrow"
+                      />
+                    </button>
+                    <div id="filter-date-added" class="hidden pl-16 px-8 pb-6">
+                      <span class="text-black/30">Not available yet</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <div class="w-full min-h-screen relative mt-8 block pl-20">
+            <div>
+              <div>
+                <h1 class="inline text-xl">Travel –</h1>
+                <span class="text-sm font-light">(1,140 resources)</span>
+              </div>
+              <div class="text-brand-body1 text-sm font-extralight">
+                All images / images
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -153,9 +351,10 @@
                 </div>
                 <div class="order-2">
                   <h4
-                    class="py-6 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl"
+                    class="py-6 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl group"
                     data-toggle="collapse"
                     data-target="#footer-partnership"
+                    data-device="mobile"
                   >
                     <img
                       src="assets/img/icons/partnership.svg"
@@ -165,13 +364,10 @@
                     <img
                       src="assets/img/icons/arrow-down-white.svg"
                       alt="Icon Arrow"
-                      class="md:hidden [.open_&]:rotate-180"
+                      class="md:hidden group-[.open]:rotate-180"
                     />
                   </h4>
-                  <div
-                    class="hidden md:block transition duration-500"
-                    id="footer-partnership"
-                  >
+                  <div class="hidden md:block" id="footer-partnership">
                     <ul class="text-sm font-light [&>li]:py-2 mt-4">
                       <li>
                         <a href="#">Become a Contributor</a>
@@ -193,9 +389,10 @@
                 </div>
                 <div class="order-3">
                   <h4
-                    class="py-8 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl"
+                    class="py-8 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl group"
                     data-toggle="collapse"
                     data-target="#footer-information"
+                    data-device="mobile"
                   >
                     <img
                       src="assets/img/icons/information.svg"
@@ -205,13 +402,10 @@
                     <img
                       src="assets/img/icons/arrow-down-white.svg"
                       alt="Icon Arrow"
-                      class="md:hidden [.open_&]:rotate-180"
+                      class="md:hidden group-[.open]:rotate-180"
                     />
                   </h4>
-                  <div
-                    class="hidden md:block transition duration-500"
-                    id="footer-information"
-                  >
+                  <div class="hidden md:block" id="footer-information">
                     <ul class="text-sm font-light [&>li]:py-2 mt-4">
                       <li>
                         <a href="#">FAQ</a>
