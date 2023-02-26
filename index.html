@@ -1,13 +1,323 @@
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="./dist/output.css" />
-    <script src="./assets/js/scripts.ts"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+
+    <title>YAYImages - HTML Template - Search Page</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div>
-      <header>Header</header>
-      <main>Main</main>
-      <footer>Footer</footer>
+      <header class="">
+        <div class="shadow-lg py-6 border-b border-brand-xl-lightgray">
+          <div
+            class="flex justify-between items-center gap-8 max-w-[1536px] px-[2rem] mx-auto max-md:h-[72px]"
+          >
+            <div class="mr-4 header-logo">
+              <a href="/">
+                <img
+                  src="./assets/img/logo/logo-text-black.svg"
+                  alt="YAYImages Logo"
+                />
+              </a>
+            </div>
+            <div
+              class="header-searchbar max-md:-mr-20 z-10 hidden md:flex text-brand-body1 flex-1 items-center gap-2"
+            >
+              <form class="m-0 flex-1">
+                <div class="flex items-center justify-between h-[48px]">
+                  <div
+                    class="flex flex-1 items-center justify-between relative h-full"
+                  >
+                    <div
+                      class="flex shrink-0 gap-2 items-center bg-brand-xl-lightgray px-5 cursor-pointer xl:min-w-[150px] h-full border border-brand-body1 rounded-md rounded-r-none"
+                    >
+                      <img
+                        src="./assets/img/icons/image.svg"
+                        alt="Icon Image"
+                      />
+                      <span class="hidden xl:block text-sm flex-1">Images</span>
+                      <img
+                        src="./assets/img/icons/arrow-down.svg"
+                        alt="Icon Arrow"
+                      />
+                    </div>
+                    <input
+                      class="h-full w-full px-4 border-y border-brand-body1"
+                      placeholder="Travel"
+                    />
+                  </div>
+                  <div
+                    class="bg-black h-full flex items-center px-3 cursor-pointer rounded-md rounded-l-none"
+                  >
+                    <img
+                      src="./assets/img/icons/search-outline.svg"
+                      alt="Icon Search"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div
+                class="hidden md:block px-2 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+              >
+                <img
+                  src="./assets/img/icons/image-search.svg"
+                  alt="Icon Image Reverse"
+                />
+              </div>
+            </div>
+            <div class="hidden lg:block">
+              <nav class="flex gap-2 xl:gap-4 items-center">
+                <a
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  >Images</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  >Videos</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  >Vectors</a
+                >
+                <a
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  >Pricing</a
+                >
+                <a
+                  class="px-4 py-3 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-500"
+                  >Log in</a
+                >
+              </nav>
+            </div>
+            <div class="flex md:hidden items-center gap-2">
+              <img
+                src="./assets/img/icons/search-outline-black.svg"
+                class="cursor-pointer p-2.5"
+                data-toggle="header-search"
+                alt="Icon Search"
+              />
+              <img
+                src="./assets/img/icons/menu.svg"
+                alt="Icon Menu"
+                class="cursor-pointer p-2.5 toggle-menu-mobile"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="h-full flex items-center justify-center text-black/20">
+          Main
+        </div>
+      </main>
+      <footer>
+        <div class="bg-black py-14 text-white">
+          <div class="container mx-auto">
+            <div class="flex">
+              <div class="flex flex-col flex-1 md:grid md:grid-cols-3">
+                <div class="order-4 md:order-1">
+                  <img
+                    src="./assets/img/logo/logo-text-white.svg"
+                    alt="YAYImages Logo"
+                    class="hidden md:block"
+                  />
+                  <ul
+                    class="max-md:flex mt-10 md:mt-4 justify-between text-xl [&>li]:py-2 [&>li>a]:flex [&>li>a]:items-center [&>li>a]:gap-2"
+                  >
+                    <li>
+                      <a href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Help
+                        <img
+                          src="./assets/img/icons/help-circle.svg"
+                          alt="Icon help"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-2">
+                  <h4
+                    class="py-8 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl"
+                    data-toggle="collapse"
+                    data-target="#footer-partnership"
+                  >
+                    <img
+                      src="assets/img/icons/partnership.svg"
+                      alt="Icon Partnership"
+                    />
+                    <span class="flex-1">Partnership</span>
+                    <img
+                      src="assets/img/icons/arrow-down-white.svg"
+                      alt="Icon Arrow"
+                      class="md:hidden"
+                    />
+                  </h4>
+                  <div class="hidden md:block" id="footer-partnership">
+                    <ul class="text-sm font-light [&>li]:py-2 mt-4">
+                      <li>
+                        <a href="#">Become a Contributor</a>
+                      </li>
+                      <li>
+                        <a href="#">Become an Affiliate</a>
+                      </li>
+                      <li>
+                        <a href="#">Contributor Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="#">Contributor Terms</a>
+                      </li>
+                      <li>
+                        <a href="#">API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="order-3">
+                  <h4
+                    class="py-8 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl"
+                    data-toggle="collapse"
+                    data-target="#footer-information"
+                  >
+                    <img
+                      src="assets/img/icons/information.svg"
+                      alt="Icon Information"
+                    />
+                    <span class="flex-1">Information</span>
+                    <img
+                      src="assets/img/icons/arrow-down-white.svg"
+                      alt="Icon Arrow"
+                      class="md:hidden"
+                    />
+                  </h4>
+                  <div class="hidden md:block" id="footer-information">
+                    <ul class="text-sm font-light [&>li]:py-2 mt-4">
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Terms</a>
+                      </li>
+                      <li>
+                        <a href="#">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block">
+                <h4 class="inline-flex items-center gap-2 text-xl">
+                  Payment Methods
+                </h4>
+                <ul class="flex items-center gap-2 mt-4">
+                  <li>
+                    <img src="./assets/img/payments/Amex.svg" alt="Amex" />
+                  </li>
+                  <li>
+                    <img src="./assets/img/payments/Visa.svg" alt="Visa" />
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/img/payments/Mastercard.svg"
+                      alt="Mastercard"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center font-light mt-24">
+              <img
+                src="./assets/img/logo/logo-text-white.svg"
+                alt="YAYImages Logo"
+                class="mx-auto mb-10 md:hidden"
+              />
+              © Copyright 2008 - 2022 YayImages all rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+
+    <div id="menu-mobile" class="absolute top-24 z-20 w-full hidden">
+      <div class="p-8">
+        <div class="bg-white rounded-lg shadow-2xl p-10 relative">
+          <img
+            src="./assets/img/icons/close.svg"
+            alt="Icon Close"
+            class="toggle-menu-mobile absolute right-8 top-4 p-4 z-10"
+          />
+          <div>
+            <a
+              href=""
+              class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+            >
+              <img
+                src="./assets/img/icons/menu-images.svg"
+                alt="Icon Images"
+              />Images
+            </a>
+            <a
+              href=""
+              class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+            >
+              <img
+                src="./assets/img/icons/menu-videos.svg"
+                alt="Icon Videos"
+              />Videos
+            </a>
+            <a
+              href=""
+              class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+            >
+              <img
+                src="./assets/img/icons/menu-vectors.svg"
+                alt="Icon Vectors"
+              />Vectors
+            </a>
+            <a
+              href=""
+              class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+            >
+              <img
+                src="./assets/img/icons/menu-pricing.svg"
+                alt="Icon Pricing"
+              />Pricing
+            </a>
+          </div>
+          <a
+            href="#"
+            class="rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center"
+            >Log in</a
+          >
+          <div class="text-center mt-6 text-brand-body1">
+            Don’t have an account?
+            <a href="#" class="text-brand-accent font-bold">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="overlay"
+      class="bg-black/10 fixed w-full h-full top-0 left-0 z-10 hidden"
+    ></div>
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script src="./dist/scripts.js"></script>
   </body>
 </html>
