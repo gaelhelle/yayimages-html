@@ -4,24 +4,34 @@ const accordions = document.querySelectorAll(
 ) as NodeListOf<HTMLElement>;
 
 const toggleSection = (section: HTMLElement) => {
+  const accordion = document.querySelector(`[data-target="#${section.id}"]`);
+  accordion.classList.toggle("open");
+
+  section.style.opacity = "0";
   section.classList.toggle("hidden");
   if (!section.classList.contains("hidden")) {
     section.style.maxHeight = section.scrollHeight + "px";
+    section.style.opacity = "1";
   } else {
     section.style.maxHeight = "";
+    section.style.opacity = "";
   }
 };
 
-const handleAccordionClick = (accordion: HTMLElement) => {
+const handleAccordionClick = (
+  event: MouseEvent & { currentTarget: HTMLElement }
+) => {
   const section = document.querySelector(
-    accordion.dataset.target
+    event.currentTarget.dataset.target
   ) as HTMLElement;
   toggleSection(section);
 };
 
 const subScribeAccordion = () => {
+  unsubScribeAccordion();
+
   for (const accordion of accordions) {
-    accordion.addEventListener("click", () => handleAccordionClick(accordion));
+    accordion.addEventListener("click", handleAccordionClick);
   }
 };
 
@@ -31,9 +41,7 @@ const unsubScribeAccordion = () => {
       accordion.dataset.target
     ) as HTMLElement;
     section.classList.remove("show");
-    accordion.removeEventListener("click", () =>
-      handleAccordionClick(accordion)
-    );
+    accordion.removeEventListener("click", handleAccordionClick);
   }
 };
 
@@ -51,12 +59,17 @@ const handleToggleSearchHeader = () => {
 toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
 
 // General window resize
+let resizeTimer;
+
 const windowResize = () => {
-  if (window.innerWidth < 768) {
-    subScribeAccordion();
-  } else {
-    unsubScribeAccordion();
-  }
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function () {
+    if (window.innerWidth < 768) {
+      subScribeAccordion();
+    } else {
+      unsubScribeAccordion();
+    }
+  }, 200);
 };
 windowResize();
 window.addEventListener("resize", windowResize);
@@ -75,18 +88,21 @@ for (const buttonMenuMobile of buttonsMenuMobile) {
 }
 
 // Closing stuff
-window.addEventListener("click", function (e) {
-  const headerSearchbar = document.querySelector(".header-searchbar");
-  const headerLogo = document.querySelector(".header-logo");
+window.addEventListener(
+  "click",
+  function (event: MouseEvent & { target: HTMLElement }) {
+    const headerSearchbar = document.querySelector(".header-searchbar");
+    const headerLogo = document.querySelector(".header-logo");
 
-  if (
-    !e.target.dataset.toggle &&
-    headerSearchbar.classList.contains("toggled-mobile") &&
-    !e.target.matches(".header-searchbar, .header-searchbar *")
-  ) {
-    headerSearchbar.classList.remove("toggled-mobile");
-    headerSearchbar.classList.add("hidden");
-    headerLogo.classList.remove("hidden");
-  } else {
+    if (
+      !event.target.dataset.toggle &&
+      headerSearchbar.classList.contains("toggled-mobile") &&
+      !event.target.matches(".header-searchbar, .header-searchbar *")
+    ) {
+      headerSearchbar.classList.remove("toggled-mobile");
+      headerSearchbar.classList.add("hidden");
+      headerLogo.classList.remove("hidden");
+    } else {
+    }
   }
-});
+);

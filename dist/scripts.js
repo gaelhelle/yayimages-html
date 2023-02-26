@@ -1,28 +1,34 @@
 // Accordions toggle
 const accordions = document.querySelectorAll('[data-toggle="collapse"]');
 const toggleSection = (section) => {
+    const accordion = document.querySelector(`[data-target="#${section.id}"]`);
+    accordion.classList.toggle("open");
+    section.style.opacity = "0";
     section.classList.toggle("hidden");
     if (!section.classList.contains("hidden")) {
         section.style.maxHeight = section.scrollHeight + "px";
+        section.style.opacity = "1";
     }
     else {
         section.style.maxHeight = "";
+        section.style.opacity = "";
     }
 };
-const handleAccordionClick = (accordion) => {
-    const section = document.querySelector(accordion.dataset.target);
+const handleAccordionClick = (event) => {
+    const section = document.querySelector(event.currentTarget.dataset.target);
     toggleSection(section);
 };
 const subScribeAccordion = () => {
+    unsubScribeAccordion();
     for (const accordion of accordions) {
-        accordion.addEventListener("click", () => handleAccordionClick(accordion));
+        accordion.addEventListener("click", handleAccordionClick);
     }
 };
 const unsubScribeAccordion = () => {
     for (const accordion of accordions) {
         const section = document.querySelector(accordion.dataset.target);
         section.classList.remove("show");
-        accordion.removeEventListener("click", () => handleAccordionClick(accordion));
+        accordion.removeEventListener("click", handleAccordionClick);
     }
 };
 // Toggle Search in Header
@@ -36,13 +42,17 @@ const handleToggleSearchHeader = () => {
 };
 toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
 // General window resize
+let resizeTimer;
 const windowResize = () => {
-    if (window.innerWidth < 768) {
-        subScribeAccordion();
-    }
-    else {
-        unsubScribeAccordion();
-    }
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+        if (window.innerWidth < 768) {
+            subScribeAccordion();
+        }
+        else {
+            unsubScribeAccordion();
+        }
+    }, 200);
 };
 windowResize();
 window.addEventListener("resize", windowResize);
@@ -58,12 +68,12 @@ for (const buttonMenuMobile of buttonsMenuMobile) {
     buttonMenuMobile.addEventListener("click", handleToggleMenuMobile);
 }
 // Closing stuff
-window.addEventListener("click", function (e) {
+window.addEventListener("click", function (event) {
     const headerSearchbar = document.querySelector(".header-searchbar");
     const headerLogo = document.querySelector(".header-logo");
-    if (!e.target.dataset.toggle &&
+    if (!event.target.dataset.toggle &&
         headerSearchbar.classList.contains("toggled-mobile") &&
-        !e.target.matches(".header-searchbar, .header-searchbar *")) {
+        !event.target.matches(".header-searchbar, .header-searchbar *")) {
         headerSearchbar.classList.remove("toggled-mobile");
         headerSearchbar.classList.add("hidden");
         headerLogo.classList.remove("hidden");
