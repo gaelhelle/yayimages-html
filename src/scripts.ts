@@ -111,11 +111,14 @@ const itemElements = document.querySelectorAll(
 const handleToggleToBasket = (
   event: MouseEvent & { currentTarget: HTMLElement }
 ) => {
-  const element = event.currentTarget;
+  const element = event.currentTarget.closest(".item-element");
   element.classList.toggle("selected");
 };
 for (const itemElement of itemElements) {
-  itemElement.addEventListener("click", handleToggleToBasket);
+  const button = itemElement.querySelector(".folder-item");
+  if (button) {
+    button.addEventListener("click", handleToggleToBasket);
+  }
 }
 // Closing stuff
 window.addEventListener(

@@ -81,11 +81,14 @@ sidebarButton.addEventListener("click", handleToggleSidebarSearch);
 // Add to folder element
 const itemElements = document.querySelectorAll(".item-element");
 const handleToggleToBasket = (event) => {
-    const element = event.currentTarget;
+    const element = event.currentTarget.closest(".item-element");
     element.classList.toggle("selected");
 };
 for (const itemElement of itemElements) {
-    itemElement.addEventListener("click", handleToggleToBasket);
+    const button = itemElement.querySelector(".folder-item");
+    if (button) {
+        button.addEventListener("click", handleToggleToBasket);
+    }
 }
 // Closing stuff
 window.addEventListener("click", function (event) {

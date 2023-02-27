@@ -23,6 +23,9 @@ body {
 .item-element:not(.selected) .folder-selected {
   @apply hidden;
 }
+.item-element.selected .folder-item {
+  @apply opacity-100;
+}
 
 .item-element.selected .folder-default {
   @apply hidden;
