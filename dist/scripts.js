@@ -2,7 +2,9 @@
 const accordions = document.querySelectorAll('[data-toggle="collapse"]');
 const toggleSection = (section) => {
     const accordion = document.querySelector(`[data-target="#${section.id}"]`);
+    const accordionIndicator = accordion.querySelector(".accordion-arrow");
     accordion.classList.toggle("open");
+    accordionIndicator.classList.toggle("rotate-180");
     section.style.opacity = "0";
     section.classList.toggle("hidden");
     section.classList.toggle("duration-500");
@@ -72,10 +74,19 @@ for (const buttonMenuMobile of buttonsMenuMobile) {
 // Closing sidebar search
 const sidebarButton = document.querySelector(".toggle-filter-sidebar");
 const handleToggleSidebarSearch = () => {
-    const sidebar = document.querySelector(".sidebar-search");
-    sidebar.classList.toggle("closed");
+    const container = document.querySelector(".page-with-sidebar");
+    container.classList.toggle("open");
 };
 sidebarButton.addEventListener("click", handleToggleSidebarSearch);
+// Add to folder element
+const itemElements = document.querySelectorAll(".item-element");
+const handleToggleToBasket = (event) => {
+    const element = event.currentTarget;
+    element.classList.toggle("selected");
+};
+for (const itemElement of itemElements) {
+    itemElement.addEventListener("click", handleToggleToBasket);
+}
 // Closing stuff
 window.addEventListener("click", function (event) {
     const headerSearchbar = document.querySelector(".header-searchbar");

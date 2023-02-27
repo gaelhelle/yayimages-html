@@ -5,3 +5,29 @@
 body {
   font-family: "Jost", sans-serif;
 }
+
+@media screen(lg) {
+  .page-with-sidebar.open .page-content {
+    @apply pl-16;
+  }
+}
+
+.page-with-sidebar.open .page-sidebar .sidebar-search-inner {
+  @apply flex;
+}
+
+.page-with-sidebar.open .sidebar-arrow-indicator {
+  @apply rotate-90;
+}
+
+.item-element:not(.selected) .folder-selected {
+  @apply hidden;
+}
+
+.item-element.selected .folder-default {
+  @apply hidden;
+}
+
+.item-element.selected .folder-item {
+  @apply bg-white;
+}
