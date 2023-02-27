@@ -719,73 +719,81 @@
                   </ul>
                 </div>
                 <div class="order-2">
-                  <h4
-                    class="py-6 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl group"
-                    data-toggle="collapse"
-                    data-target="#footer-partnership"
-                    data-device="mobile"
-                  >
-                    <img
-                      src="assets/img/icons/partnership.svg"
-                      alt="Icon Partnership"
-                    />
-                    <span class="flex-1">Partnership</span>
-                    <img
-                      src="assets/img/icons/arrow-down-white.svg"
-                      alt="Icon Arrow"
-                      class="md:hidden group-[.open]:rotate-180"
-                    />
-                  </h4>
-                  <div class="hidden md:block" id="footer-partnership">
-                    <ul class="text-sm font-light [&>li]:py-2 mt-4">
-                      <li>
-                        <a href="#">Become a Contributor</a>
-                      </li>
-                      <li>
-                        <a href="#">Become an Affiliate</a>
-                      </li>
-                      <li>
-                        <a href="#">Contributor Dashboard</a>
-                      </li>
-                      <li>
-                        <a href="#">Contributor Terms</a>
-                      </li>
-                      <li>
-                        <a href="#">API</a>
-                      </li>
-                    </ul>
+                  <div class="border-white border-b md:border-0">
+                    <h4
+                      class="py-6 md:py-0 w-full flex items-center gap-2 text-xl group"
+                      data-toggle="collapse"
+                      data-target="#footer-partnership"
+                      data-device="mobile"
+                    >
+                      <img
+                        src="assets/img/icons/partnership.svg"
+                        alt="Icon Partnership"
+                      />
+                      <span class="flex-1">Partnership</span>
+                      <img
+                        src="assets/img/icons/arrow-down-white.svg"
+                        alt="Icon Arrow"
+                        class="accordion-arrow md:hidden"
+                      />
+                    </h4>
+                    <div class="hidden md:block" id="footer-partnership">
+                      <ul
+                        class="text-sm font-light [&>li]:py-2 -mt-2 md:mt-4 pb-6"
+                      >
+                        <li>
+                          <a href="#">Become a Contributor</a>
+                        </li>
+                        <li>
+                          <a href="#">Become an Affiliate</a>
+                        </li>
+                        <li>
+                          <a href="#">Contributor Dashboard</a>
+                        </li>
+                        <li>
+                          <a href="#">Contributor Terms</a>
+                        </li>
+                        <li>
+                          <a href="#">API</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="order-3">
-                  <h4
-                    class="py-8 border-white border-b md:py-0 md:border-0 w-full flex items-center gap-2 text-xl group"
-                    data-toggle="collapse"
-                    data-target="#footer-information"
-                    data-device="mobile"
-                  >
-                    <img
-                      src="assets/img/icons/information.svg"
-                      alt="Icon Information"
-                    />
-                    <span class="flex-1">Information</span>
-                    <img
-                      src="assets/img/icons/arrow-down-white.svg"
-                      alt="Icon Arrow"
-                      class="md:hidden group-[.open]:rotate-180"
-                    />
-                  </h4>
-                  <div class="hidden md:block" id="footer-information">
-                    <ul class="text-sm font-light [&>li]:py-2 mt-4">
-                      <li>
-                        <a href="#">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="#">Terms</a>
-                      </li>
-                      <li>
-                        <a href="#">Privacy Policy</a>
-                      </li>
-                    </ul>
+                  <div class="border-white border-b md:border-0">
+                    <h4
+                      class="py-8 md:py-0 w-full flex items-center gap-2 text-xl group"
+                      data-toggle="collapse"
+                      data-target="#footer-information"
+                      data-device="mobile"
+                    >
+                      <img
+                        src="assets/img/icons/information.svg"
+                        alt="Icon Information"
+                      />
+                      <span class="flex-1">Information</span>
+                      <img
+                        src="assets/img/icons/arrow-down-white.svg"
+                        alt="Icon Arrow"
+                        class="accordion-arrow md:hidden"
+                      />
+                    </h4>
+                    <div class="hidden md:block" id="footer-information">
+                      <ul
+                        class="text-sm font-light [&>li]:py-2 -mt-2 md:mt-4 pb-6"
+                      >
+                        <li>
+                          <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                          <a href="#">Terms</a>
+                        </li>
+                        <li>
+                          <a href="#">Privacy Policy</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -822,13 +830,13 @@
       </footer>
     </div>
 
-    <div id="menu-mobile" class="absolute top-24 z-90 w-full hidden">
+    <div id="menu-mobile" class="absolute top-16 z-[90] w-full hidden">
       <div class="p-8">
         <div class="bg-white rounded-lg shadow-2xl p-10 relative">
           <img
             src="./assets/img/icons/close.svg"
             alt="Icon Close"
-            class="toggle-menu-mobile absolute right-8 top-4 p-4 z-10"
+            class="toggle-menu-mobile absolute right-4 top-4 p-4 z-10"
           />
           <div>
             <a
@@ -883,9 +891,13 @@
 
     <div
       id="overlay"
-      class="bg-black/10 fixed w-full h-full top-0 left-0 z-80 hidden"
+      class="bg-black/20 fixed w-full h-full top-0 left-0 z-[80] hidden"
     ></div>
 
+    <!-- Tailwind helpers -->
+    <div class="hidden">
+      <span class="rotate-180"></span>
+    </div>
     <!-- Assets -->
     <link rel="stylesheet" href="./dist/output.css" />
     <script src="./dist/scripts.js"></script>
