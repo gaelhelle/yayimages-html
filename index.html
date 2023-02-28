@@ -19,7 +19,7 @@
       <header class="sticky top-0 bg-white z-50">
         <div class="shadow-lg md:py-6 border-b border-brand-xl-lightgray">
           <div
-            class="flex justify-between items-center gap-8 container px-[2rem] mx-auto max-md:min-h-[72px]"
+            class="flex justify-between items-center gap-8 container-fluid mx-auto max-md:min-h-[72px]"
           >
             <div class="mr-4 header-logo">
               <a href="/">
@@ -70,7 +70,7 @@
               </form>
               <button
                 type="button"
-                class="hidden md:block px-2 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                class="hidden md:block px-2 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
               >
                 <img
                   src="./assets/img/icons/image-search.svg"
@@ -82,27 +82,27 @@
               <nav class="flex gap-2 xl:gap-4 items-center">
                 <a
                   href="#"
-                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
                   >Images</a
                 >
                 <a
                   href="#"
-                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
                   >Videos</a
                 >
                 <a
                   href="#"
-                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
                   >Vectors</a
                 >
                 <a
                   href="#"
-                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-500"
+                  class="px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
                   >Pricing</a
                 >
                 <a
                   href="#"
-                  class="px-4 py-3 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-500"
+                  class="px-4 py-3 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-300"
                   >Log in</a
                 >
               </nav>
@@ -126,204 +126,229 @@
       <main>
         <div class="page-with-sidebar open flex">
           <aside
-            class="hidden lg:block page-sidebar flex-1 relative z-10 top-0 bg-white grow-0"
+            class="hidden lg:block page-sidebar flex-1 relative z-10 top-0 bg-white grow-0 scrollable-inner"
           >
             <button
-              class="toggle-filter-sidebar bg-black rounded-r-lg absolute top-6 left-full h-11 w-9 flex items-center justify-center cursor-pointer"
+              class="toggle-filter-sidebar bg-black rounded-r-lg fixed top-[122px] left-0 h-11 w-9 flex items-center justify-center cursor-pointer"
             >
               <img
                 src="./assets/img/icons/arrow-down-white.svg"
                 alt="Icon Arrow"
-                class="sidebar-arrow-indicator -rotate-90"
+                class="-rotate-90"
               />
             </button>
-            <div
-              class="sidebar-search-inner hidden flex-1 h-full flex-col rounded-tr-lg w-[30vw] min-w-[270px] max-w-[400px]"
-            >
+
+            <div class="sidebar-search-container sticky top-[97px] block">
               <div
-                class="top-[97px] rounded-tr-lg border-2 border-black border-l-0 border-b-0"
+                class="flex items-center justify-between text-lg pl-16 px-6 py-5 border-2 border-b-0 border-l-0 border-black sticky top-[97px] bg-white z-10 shadow-lg rounded-tr-lg"
               >
-                <div
-                  class="flex items-center gap-6 justify-between text-xl pl-16 px-8 py-6 border-b-2 border-black"
-                >
-                  <div class="flex gap-6">
-                    <img
-                      src="./assets/img/icons/filters.svg"
-                      alt="Icon Filters"
-                    />
-                    Filters
-                  </div>
-                  <button
-                    class="text-brand-body1 text-sm cursor-pointer hover:underline"
-                  >
-                    Clear
-                  </button>
+                <div class="flex gap-4">
+                  <img
+                    src="./assets/img/icons/filters.svg"
+                    alt="Icon Filters"
+                    class="w-5"
+                  />
+                  Filters
                 </div>
-                <ul class="divide-y-2 divide-black border-b-2 border-black">
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer group open"
-                      data-toggle="collapse"
-                      data-target="#filter-tier"
-                    >
-                      Tier
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-tier" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-media-type"
-                    >
-                      Media Type
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-media-type" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-orientation"
-                    >
-                      Orientation
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-orientation" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-people"
-                    >
-                      People
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-people" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-color"
-                    >
-                      Color
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-color" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-exclude-keywords"
-                    >
-                      Exclude Keywords
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div
-                      id="filter-exclude-keywords"
-                      class="hidden pl-16 px-8 pb-6"
-                    >
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-text-space"
-                    >
-                      Text Space
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-text-space" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-username"
-                    >
-                      Username
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-username" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                  <li class="hover:bg-brand-xl-lightgray transition">
-                    <button
-                      class="w-full flex items-center justify-between text-lg xl:text-xl pl-16 px-8 py-6 cursor-pointer"
-                      data-toggle="collapse"
-                      data-target="#filter-date-added"
-                    >
-                      Date Added
-                      <img
-                        src="./assets/img/icons/arrow-down-black.svg"
-                        alt="Icon Arrow"
-                        class="accordion-arrow"
-                      />
-                    </button>
-                    <div id="filter-date-added" class="hidden pl-16 px-8 pb-6">
-                      <span class="text-black/30">Not available yet</span>
-                    </div>
-                  </li>
-                </ul>
+                <button
+                  class="text-brand-body1 text-sm cursor-pointer hover:underline"
+                >
+                  Clear
+                </button>
+
+                <button
+                  class="toggle-filter-sidebar bg-black rounded-r-lg absolute top-6 left-full h-11 w-9 flex items-center justify-center cursor-pointer"
+                >
+                  <img
+                    src="./assets/img/icons/arrow-down-white.svg"
+                    alt="Icon Arrow"
+                    class="sidebar-arrow-indicator -rotate-90"
+                  />
+                </button>
               </div>
-              <div class="border-r-2 border-black h-full"></div>
+
+              <div class="sidebar-search-inner h-full flex-1 flex flex-col">
+                <div
+                  class="top-[97px] border-2 border-black border-l-0 border-b-0"
+                >
+                  <ul class="divide-y-2 divide-black border-b-2 border-black">
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer group open"
+                        data-toggle="collapse"
+                        data-target="#filter-tier"
+                      >
+                        Tier
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div id="filter-tier" class="hidden pl-16 px-8 pb-6">
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-media-type"
+                      >
+                        Media Type
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div
+                        id="filter-media-type"
+                        class="hidden pl-16 px-8 pb-6"
+                      >
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-orientation"
+                      >
+                        Orientation
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div
+                        id="filter-orientation"
+                        class="hidden pl-16 px-8 pb-6"
+                      >
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-people"
+                      >
+                        People
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div id="filter-people" class="hidden pl-16 px-8 pb-6">
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-color"
+                      >
+                        Color
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div id="filter-color" class="hidden pl-16 px-8 pb-6">
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-exclude-keywords"
+                      >
+                        Exclude Keywords
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div
+                        id="filter-exclude-keywords"
+                        class="hidden pl-16 px-8 pb-6"
+                      >
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-text-space"
+                      >
+                        Text Space
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div
+                        id="filter-text-space"
+                        class="hidden pl-16 px-8 pb-6"
+                      >
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-username"
+                      >
+                        Username
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div id="filter-username" class="hidden pl-16 px-8 pb-6">
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                    <li class="hover:bg-brand-xl-lightgray transition">
+                      <button
+                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        data-toggle="collapse"
+                        data-target="#filter-date-added"
+                      >
+                        Date Added
+                        <img
+                          src="./assets/img/icons/arrow-down-black.svg"
+                          alt="Icon Arrow"
+                          class="accordion-arrow"
+                        />
+                      </button>
+                      <div
+                        id="filter-date-added"
+                        class="hidden pl-16 px-8 pb-6"
+                      >
+                        <span class="text-black/30">Not available yet</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="border-r-2 border-black flex-1"></div>
+              </div>
             </div>
           </aside>
 
           <div
-            class="page-content container mx-auto min-h-screen relative mt-8 block"
+            class="page-content container-fluid mx-auto min-h-screen relative mt-8 block"
           >
             <div class="mb-6">
               <div>
@@ -347,7 +372,7 @@
                     Premium
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -380,7 +405,7 @@
                     Premium
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -410,7 +435,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -440,7 +465,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -470,7 +495,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -500,7 +525,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -530,7 +555,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -560,7 +585,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -590,7 +615,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -620,7 +645,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"
@@ -650,7 +675,7 @@
                     Appsumo Startups
                   </div>
                   <div
-                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-500"
+                    class="folder-item cursor-pointer absolute bottom-4 right-4 text-white flex items-center gap-2 bg-[#000]/50 rounded-lg px-3 py-2 font-light text-sm opacity-0 group-hover:opacity-100 transition duration-300"
                   >
                     <img
                       src="./assets/img/icons/folder.svg"

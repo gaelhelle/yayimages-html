@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sidebar-filter-size: 30vw;
+}
+
 body {
   font-family: "Jost", sans-serif;
+}
+
+.container-fluid {
+  @apply max-w-none w-full px-8 lg:px-16;
+}
+
+.sidebar-search-inner {
+  @apply w-[20vw] min-w-[270px] max-w-[400px] sticky top-[167px] overflow-x-hidden overflow-y-scroll;
+  max-height: calc(100vh - 167px);
 }
 
 @media screen(lg) {
@@ -12,8 +25,8 @@ body {
   }
 }
 
-.page-with-sidebar.open .page-sidebar .sidebar-search-inner {
-  @apply flex;
+.page-with-sidebar:not(.open) .page-sidebar .sidebar-search-container {
+  @apply hidden;
 }
 
 .page-with-sidebar.open .sidebar-arrow-indicator {
@@ -34,3 +47,23 @@ body {
 .item-element.selected .folder-item {
   @apply bg-white;
 }
+
+/*
+.scrollable-inner * {
+  scrollbar-width: thin;
+  scrollbar-color: #a5b7c6 transparent;
+}
+
+.scrollable-inner *::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollable-inner *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-inner *::-webkit-scrollbar-thumb {
+  background-color: #a5b7c6;
+  border: 3px solid transparent;
+}
+*/

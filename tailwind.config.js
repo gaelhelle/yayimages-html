@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       container: {
+        maxWidth: "1480px !important",
         padding: "2rem",
       },
       colors: {

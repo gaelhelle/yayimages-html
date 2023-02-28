@@ -72,12 +72,14 @@ for (const buttonMenuMobile of buttonsMenuMobile) {
     buttonMenuMobile.addEventListener("click", handleToggleMenuMobile);
 }
 // Closing sidebar search
-const sidebarButton = document.querySelector(".toggle-filter-sidebar");
+const sidebarButtons = document.querySelectorAll(".toggle-filter-sidebar");
 const handleToggleSidebarSearch = () => {
     const container = document.querySelector(".page-with-sidebar");
     container.classList.toggle("open");
 };
-sidebarButton.addEventListener("click", handleToggleSidebarSearch);
+for (const sidebarButton of sidebarButtons) {
+    sidebarButton.addEventListener("click", handleToggleSidebarSearch);
+}
 // Add to folder element
 const itemElements = document.querySelectorAll(".item-element");
 const handleToggleToBasket = (event) => {
