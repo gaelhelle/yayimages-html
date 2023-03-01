@@ -10,12 +10,24 @@ const toggleSection = (section) => {
     section.classList.toggle("duration-500");
     section.classList.toggle("transition");
     if (!section.classList.contains("hidden")) {
-        section.style.maxHeight = section.scrollHeight + "px";
+        // section.style.maxHeight = section.scrollHeight + "px";
         section.style.opacity = "1";
     }
     else {
         section.style.maxHeight = "";
         section.style.opacity = "";
+    }
+    if (section.id === "filter-color") {
+        setTimeout(function () {
+            Coloris({
+                alpha: false,
+                inline: true,
+                parent: ".container-color",
+                el: ".input-color",
+                wrap: true,
+                theme: "default",
+            });
+        }, 500);
     }
 };
 const handleAccordionClick = (event) => {
@@ -44,7 +56,9 @@ const handleToggleSearchHeader = () => {
     headerSearchbar.classList.toggle("hidden");
     headerSearchbar.classList.toggle("toggled-mobile");
 };
-toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
+if (toggleSearchHeader) {
+    toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
+}
 // General window resize
 let resizeTimer;
 const windowResize = () => {
@@ -95,6 +109,8 @@ for (const itemElement of itemElements) {
 window.addEventListener("click", function (event) {
     const headerSearchbar = document.querySelector(".header-searchbar");
     const headerLogo = document.querySelector(".header-logo");
+    if (!headerSearchbar || !headerLogo)
+        return;
     if (!event.target.dataset.toggle &&
         headerSearchbar.classList.contains("toggled-mobile") &&
         !event.target.matches(".header-searchbar, .header-searchbar *")) {

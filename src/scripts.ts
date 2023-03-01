@@ -16,11 +16,24 @@ const toggleSection = (section: HTMLElement) => {
   section.classList.toggle("transition");
 
   if (!section.classList.contains("hidden")) {
-    section.style.maxHeight = section.scrollHeight + "px";
+    // section.style.maxHeight = section.scrollHeight + "px";
     section.style.opacity = "1";
   } else {
     section.style.maxHeight = "";
     section.style.opacity = "";
+  }
+
+  if (section.id === "filter-color") {
+    setTimeout(function () {
+      Coloris({
+        alpha: false,
+        inline: true,
+        parent: ".container-color",
+        el: ".input-color",
+        wrap: true,
+        theme: "default",
+      });
+    }, 500);
   }
 };
 
@@ -63,7 +76,9 @@ const handleToggleSearchHeader = () => {
   headerSearchbar.classList.toggle("hidden");
   headerSearchbar.classList.toggle("toggled-mobile");
 };
-toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
+if (toggleSearchHeader) {
+  toggleSearchHeader.addEventListener("click", handleToggleSearchHeader);
+}
 
 // General window resize
 let resizeTimer;
@@ -127,6 +142,8 @@ window.addEventListener(
   function (event: MouseEvent & { target: HTMLElement }) {
     const headerSearchbar = document.querySelector(".header-searchbar");
     const headerLogo = document.querySelector(".header-logo");
+
+    if (!headerSearchbar || !headerLogo) return;
 
     if (
       !event.target.dataset.toggle &&

@@ -137,7 +137,7 @@
               class="sidebar-search-container sticky top-[var(--sidebar-filter-offset-y)] block"
             >
               <div
-                class="flex items-center justify-between text-lg pl-16 px-6 py-5 border-2 border-b-0 border-l-0 border-black sticky top-[var(--sidebar-filter-offset-y)] bg-white z-10 shadow-lg rounded-tr-lg"
+                class="flex items-center justify-between text-lg lg:pl-16 px-6 py-5 border-2 border-b-0 border-l-0 border-black sticky top-[var(--sidebar-filter-offset-y)] bg-white z-10 shadow-lg rounded-tr-lg"
               >
                 <div class="flex gap-4">
                   <img
@@ -179,7 +179,7 @@
                   <ul class="divide-y-2 divide-black border-b-2 border-black">
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer group open"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer group open"
                         data-toggle="collapse"
                         data-target="#filter-tier"
                       >
@@ -190,13 +190,13 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-tier" class="hidden pl-16 px-8 pb-6">
+                      <div id="filter-tier" class="hidden lg:pl-16 px-8 pb-6">
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-media-type"
                       >
@@ -209,14 +209,14 @@
                       </button>
                       <div
                         id="filter-media-type"
-                        class="hidden pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-8 pb-6"
                       >
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-orientation"
                       >
@@ -229,14 +229,48 @@
                       </button>
                       <div
                         id="filter-orientation"
-                        class="hidden pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-8 pb-6"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div class="flex flex-col gap-2 text-brand-body1">
+                          <label>
+                            <input
+                              type="radio"
+                              name="filter-orientation"
+                              value="horizontal"
+                              checked
+                            />
+                            Horizontal</label
+                          >
+                          <label>
+                            <input
+                              type="radio"
+                              name="filter-orientation"
+                              value="vertical"
+                            />
+                            Vertical</label
+                          >
+                          <label>
+                            <input
+                              type="radio"
+                              name="filter-orientation"
+                              value="portrait"
+                            />
+                            Portrait</label
+                          >
+                          <label>
+                            <input
+                              type="radio"
+                              name="filter-orientation"
+                              value="landscape"
+                            />
+                            Landscape</label
+                          >
+                        </div>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-people"
                       >
@@ -247,13 +281,39 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-people" class="hidden pl-16 px-8 pb-6">
-                        <span class="text-black/30">Not available yet</span>
+                      <div id="filter-people" class="hidden lg:pl-16 px-8 pb-6">
+                        <div class="flex gap-2 justify-between">
+                          <button
+                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm"
+                          >
+                            Any
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                          >
+                            0
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                          >
+                            1
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                          >
+                            2
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                          >
+                            3+
+                          </button>
+                        </div>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-color"
                       >
@@ -264,13 +324,19 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-color" class="hidden pl-16 px-8 pb-6">
-                        <span class="text-black/30">Not available yet</span>
+                      <div id="filter-color" class="hidden lg:pl-16 px-8 pb-6">
+                        <div class="relative">
+                          <div class="container-color"></div>
+                          <input
+                            class="input-color hidden"
+                            placeholder="#fff"
+                          />
+                        </div>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-exclude-keywords"
                       >
@@ -283,14 +349,14 @@
                       </button>
                       <div
                         id="filter-exclude-keywords"
-                        class="hidden pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-8 pb-6"
                       >
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-text-space"
                       >
@@ -303,14 +369,14 @@
                       </button>
                       <div
                         id="filter-text-space"
-                        class="hidden pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-8 pb-6"
                       >
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-username"
                       >
@@ -321,13 +387,16 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-username" class="hidden pl-16 px-8 pb-6">
+                      <div
+                        id="filter-username"
+                        class="hidden lg:pl-16 px-8 pb-6"
+                      >
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
                     <li>
                       <button
-                        class="w-full flex items-center justify-between text-lg pl-16 px-6 py-5 cursor-pointer"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-date-added"
                       >
@@ -340,7 +409,7 @@
                       </button>
                       <div
                         id="filter-date-added"
-                        class="hidden pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-8 pb-6"
                       >
                         <span class="text-black/30">Not available yet</span>
                       </div>
@@ -942,6 +1011,13 @@
       id="overlay"
       class="bg-black/20 fixed w-full h-full top-0 left-0 z-[80] hidden"
     ></div>
+
+    <!-- Ext resources -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
 
     <!-- Tailwind helpers -->
     <div class="hidden">
