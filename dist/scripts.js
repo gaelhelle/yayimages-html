@@ -77,8 +77,10 @@ window.addEventListener("resize", windowResize);
 const handleToggleMenuMobile = () => {
     const overlay = document.querySelector("#overlay");
     const menuMobile = document.querySelector("#menu-mobile");
+    const body = document.querySelector("body");
     overlay.classList.toggle("hidden");
     menuMobile.classList.toggle("hidden");
+    body.classList.toggle("overflow-y-hidden");
 };
 const buttonsMenuMobile = document.querySelectorAll(".toggle-menu-mobile");
 for (const buttonMenuMobile of buttonsMenuMobile) {
