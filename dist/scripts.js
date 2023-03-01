@@ -58,7 +58,6 @@ const windowResize = () => {
         // }
     }, 200);
 };
-windowResize();
 window.addEventListener("resize", windowResize);
 // Menu Mobile
 const handleToggleMenuMobile = () => {
@@ -106,3 +105,13 @@ window.addEventListener("click", function (event) {
     else {
     }
 });
+const loadMobile = () => {
+    if (window.innerWidth < 1024) {
+        document.querySelector(".page-with-sidebar").classList.toggle("open");
+    }
+};
+const init = () => {
+    loadMobile();
+    windowResize();
+};
+init();

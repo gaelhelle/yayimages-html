@@ -80,7 +80,6 @@ const windowResize = () => {
     // }
   }, 200);
 };
-windowResize();
 window.addEventListener("resize", windowResize);
 
 // Menu Mobile
@@ -141,3 +140,16 @@ window.addEventListener(
     }
   }
 );
+
+const loadMobile = () => {
+  if (window.innerWidth < 1024) {
+    document.querySelector(".page-with-sidebar").classList.toggle("open");
+  }
+};
+
+const init = () => {
+  loadMobile();
+  windowResize();
+};
+
+init();

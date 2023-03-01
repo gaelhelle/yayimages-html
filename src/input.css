@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --sidebar-filter-size: 30vw;
+  --header-height: 72px;
+  --sidebar-filter-offset-y: 0;
 }
 
 body {
@@ -14,18 +15,24 @@ body {
   @apply max-w-none w-full px-8 lg:px-16;
 }
 
+.aside-filters {
+  @apply flex-1 z-10 top-0 bg-white grow-0;
+  @apply max-lg:fixed max-lg:w-screen max-lg:h-screen max-lg:z-[120];
+  @apply lg:block;
+}
+
 .sidebar-search-inner {
-  @apply w-[20vw] min-w-[270px] max-w-[400px] sticky top-[167px] overflow-x-hidden overflow-y-scroll;
-  max-height: calc(100vh - 167px);
+  @apply w-full lg:w-[20vw] lg:min-w-[270px] lg:max-w-[400px] sticky top-[100px] lg:top-[167px] overflow-x-hidden overflow-y-scroll;
+  @apply max-h-[calc(100vh_-_100px)] lg:max-h-[calc(100vh_-_171px)];
 }
 
-@media screen(lg) {
-  .page-with-sidebar.open .page-content {
-    @apply pl-16;
-  }
+.page-with-sidebar:not(.open) .aside-filters {
+  @apply max-lg:hidden;
 }
-
-.page-with-sidebar:not(.open) .page-sidebar .sidebar-search-container {
+.page-with-sidebar:not(.open) .aside-filters .sidebar-search-container {
+  @apply hidden;
+}
+.page-with-sidebar.open .sidebar-arrow-indicator--fixed {
   @apply hidden;
 }
 
@@ -46,6 +53,16 @@ body {
 
 .item-element.selected .folder-item {
   @apply bg-white;
+}
+
+@media screen(lg) {
+  :root {
+    --header-height: 100px;
+    --sidebar-filter-offset-y: 100px;
+  }
+  .page-with-sidebar.open .page-content {
+    @apply pl-16;
+  }
 }
 
 /*
