@@ -98,11 +98,12 @@
                 class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
                 >Pricing</a
               >
-              <a
-                href="#"
-                class="text-sm px-4 py-2.5 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-300"
-                >Sign Up</a
+              <button
+                type="button"
+                class="toggle-menu-signup text-sm px-4 py-2.5 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-300"
               >
+                Sign Up
+              </button>
             </nav>
           </div>
           <div class="flex items-center gap-2 lg:hidden">
@@ -190,7 +191,7 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-tier" class="hidden lg:pl-16 px-8 pb-6">
+                      <div id="filter-tier" class="hidden lg:pl-16 px-5 pb-5">
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
@@ -209,9 +210,60 @@
                       </button>
                       <div
                         id="filter-media-type"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div class="grid grid-cols-2 gap-2">
+                          <button
+                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm flex justify-center items-center gap-1.5"
+                          >
+                            <img
+                              src="./assets/img/icons/image-accent.svg"
+                              alt="Icon Images"
+                              class="w-3"
+                            />
+                            All Images
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                          >
+                            <img
+                              src="./assets/img/icons/photos.svg"
+                              alt="Icon Photos"
+                              class="w-3"
+                            />
+                            Photos
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                          >
+                            <img
+                              src="./assets/img/icons/menu-vectors.svg"
+                              alt="Icon Vectors"
+                              class="w-3"
+                            />
+                            Vectors
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                          >
+                            <img
+                              src="./assets/img/icons/editorial.svg"
+                              alt="Icon Editorial"
+                              class="w-3"
+                            />
+                            Editorial
+                          </button>
+                          <button
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                          >
+                            <img
+                              src="./assets/img/icons/menu-videos.svg"
+                              alt="Icon Videos"
+                              class="w-3"
+                            />
+                            Videos
+                          </button>
+                        </div>
                       </div>
                     </li>
                     <li>
@@ -229,7 +281,7 @@
                       </button>
                       <div
                         id="filter-orientation"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
                         <div class="flex flex-col gap-2 text-brand-body1">
                           <label>
@@ -281,7 +333,7 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-people" class="hidden lg:pl-16 px-8 pb-6">
+                      <div id="filter-people" class="hidden lg:pl-16 px-5 pb-5">
                         <div class="flex gap-2 justify-between">
                           <button
                             class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm"
@@ -324,7 +376,7 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-color" class="hidden lg:pl-16 px-8 pb-6">
+                      <div id="filter-color" class="hidden lg:pl-16 px-5 pb-5">
                         <div class="relative">
                           <div class="container-color"></div>
                           <input
@@ -349,9 +401,14 @@
                       </button>
                       <div
                         id="filter-exclude-keywords"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div>
+                          <input
+                            placeholder="Add tag..."
+                            class="rounded-lg border-brand-body1 border px-3 py-2.5 text-brand-body1 text-sm w-full"
+                          />
+                        </div>
                       </div>
                     </li>
                     <li>
@@ -369,9 +426,44 @@
                       </button>
                       <div
                         id="filter-text-space"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div>
+                          <div
+                            class="grid gap-2 grid-cols-3 w-1/2 mx-auto mb-4"
+                          >
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                            <div
+                              class="text-space-item shadow hover:shadow-none transition-shadow duration-100 rounded-lg w-8 h-8 border mx-auto cursor-pointer"
+                            ></div>
+                          </div>
+                          <span class="text-brand-body1 text-xs"
+                            >Filter images with possibility to add text.</span
+                          >
+                        </div>
                       </div>
                     </li>
                     <li>
@@ -389,9 +481,20 @@
                       </button>
                       <div
                         id="filter-username"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div>
+                          <input
+                            placeholder="Username"
+                            class="rounded-lg border-brand-body1 border px-3 py-2.5 text-brand-body1 text-sm w-full"
+                          />
+                          <button
+                            type="submit"
+                            class="rounded-lg py-2 px-3 bg-black text-white w-full mt-3"
+                          >
+                            Submit
+                          </button>
+                        </div>
                       </div>
                     </li>
                     <li>
@@ -409,9 +512,35 @@
                       </button>
                       <div
                         id="filter-date-added"
-                        class="hidden lg:pl-16 px-8 pb-6"
+                        class="hidden lg:pl-16 px-5 pb-5"
                       >
-                        <span class="text-black/30">Not available yet</span>
+                        <div>
+                          <div class="text-xs text-brand-body1 mb-4">
+                            Images not older than
+                          </div>
+                          <div class="grid grid-cols-3 gap-2">
+                            <button
+                              class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm"
+                            >
+                              All
+                            </button>
+                            <button
+                              class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            >
+                              7 days
+                            </button>
+                            <button
+                              class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            >
+                              30 days
+                            </button>
+                            <button
+                              class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            >
+                              Past Year
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -949,11 +1078,75 @@
     </div>
 
     <div
-      id="menu-mobile"
-      class="fixed top-12 z-[90] w-full h-screen hidden overflow-y-scroll"
+      id="menu-signup"
+      class="fixed top-0 pt-10 z-[90] h-screen w-full hidden overflow-y-scroll"
     >
-      <div class="p-8">
-        <div class="bg-white rounded-lg shadow-2xl p-10 relative">
+      <div class="p-4 lg:p-8">
+        <div
+          class="bg-white rounded-lg shadow-2xl p-7 lg:p-10 relative w-full max-w-[500px] mx-auto"
+        >
+          <button class="toggle-menu-signup absolute top-4 right-4">
+            <img
+              src="./assets/img/icons/close.svg"
+              alt="Icon Close"
+              class="p-4"
+            />
+          </button>
+          <div class="text-center">
+            <h4 class="text-2xl mb-4">Welcome!</h4>
+            <p class="text-lg mb-4">
+              Create your account to gain download access
+            </p>
+            <form>
+              <div class="text-left flex flex-col md:grid md:grid-cols-2 gap-3">
+                <input
+                  placeholder="First name *"
+                  class="rounded-lg border px-5 py-3"
+                />
+                <input
+                  placeholder="Last name*"
+                  class="rounded-lg border px-5 py-3"
+                />
+                <input
+                  placeholder="Email address *"
+                  class="col-span-2 rounded-lg border px-5 py-3"
+                />
+                <input
+                  placeholder="Create password *"
+                  type="password"
+                  class="col-span-2 rounded-lg border px-5 py-3"
+                />
+              </div>
+              <button
+                class="toggle-menu-signup rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center mx-auto w-full max-w-[300px]"
+              >
+                Sign Up
+              </button>
+            </form>
+
+            <div class="text-center mt-6 text-brand-body1 text-sm">
+              <div>
+                Already have an account?
+                <a href="#" class="text-brand-accent font-bold">Login</a>
+              </div>
+              <div class="mt-4">
+                By clicking Subscribe you are agreeing to our
+                <a>Terms & Conditions</a> and our <a>Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="menu-mobile"
+      class="fixed top-0 pt-10 z-[90] w-full h-screen hidden overflow-y-scroll"
+    >
+      <div class="p-4 lg:p-8">
+        <div
+          class="bg-white rounded-lg shadow-2xl p-7 lg:p-10 relative w-full max-w-[500px] mx-auto"
+        >
           <img
             src="./assets/img/icons/close.svg"
             alt="Icon Close"
@@ -997,14 +1190,14 @@
               />Pricing
             </a>
           </div>
-          <a
-            href="#"
-            class="rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center"
-            >Log in</a
+          <button
+            class="toggle-menu-signup rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center w-full"
           >
-          <div class="text-center mt-6 text-brand-body1">
-            Don’t have an account?
-            <a href="#" class="text-brand-accent font-bold">Sign Up</a>
+            Sign Up
+          </button>
+          <div class="text-center mt-6 text-brand-body1 text-sm">
+            Already have an account?
+            <a href="#" class="text-brand-accent font-bold">Login</a>
           </div>
         </div>
       </div>

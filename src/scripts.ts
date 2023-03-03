@@ -160,11 +160,46 @@ window.addEventListener(
   }
 );
 
+// Text Space filter
+const handleTextSpace = (
+  event: MouseEvent & { currentTarget: HTMLElement }
+) => {
+  const target = event.currentTarget;
+  target.classList.toggle("active");
+};
+
+const buttonsTextSpace = document.querySelectorAll(".text-space-item");
+for (const buttonTextSpace of buttonsTextSpace) {
+  buttonTextSpace.addEventListener("click", handleTextSpace);
+}
+
 const loadMobile = () => {
   if (window.innerWidth < 1024) {
     document.querySelector(".page-with-sidebar").classList.toggle("open");
   }
 };
+
+// Menu Mobile
+const handleToggleMenuSignup = () => {
+  const overlay = document.querySelector("#overlay");
+  const menuSignup = document.querySelector("#menu-signup");
+  const menuMobile = document.querySelector("#menu-mobile");
+
+  if (!menuMobile.classList.contains("hidden")) {
+    menuMobile.classList.add("hidden");
+    overlay.classList.toggle("hidden");
+  }
+
+  const body = document.querySelector("body");
+  overlay.classList.toggle("hidden");
+  menuSignup.classList.toggle("hidden");
+  body.classList.toggle("overflow-y-hidden");
+};
+
+const buttonsMenuSignup = document.querySelectorAll(".toggle-menu-signup");
+for (const buttonMenuSignup of buttonsMenuSignup) {
+  buttonMenuSignup.addEventListener("click", handleToggleMenuSignup);
+}
 
 const init = () => {
   loadMobile();

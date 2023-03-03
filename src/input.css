@@ -55,6 +55,10 @@ body {
   @apply bg-white;
 }
 
+.text-space-item.active {
+  @apply bg-brand-accent shadow-none;
+}
+
 @media screen(lg) {
   :root {
     --header-height: 100px;
