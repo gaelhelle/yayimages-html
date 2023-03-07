@@ -3,9 +3,9 @@
 >
   <div class="flex justify-between items-center gap-8 container-fluid mx-auto">
     <div class="mr-4 header-logo">
-      <a href="/">
+      <a href="/index">
         <img
-          src="./assets/img/logo/logo-text-black.svg"
+          src="/assets/img/logo/logo-text-black.svg"
           alt="YAYImages Logo"
           class="max-w-[93px]"
         />
@@ -21,24 +21,21 @@
               type="button"
               class="flex shrink-0 gap-2 items-center bg-brand-xl-lightgray px-5 cursor-pointer xl:min-w-[150px] h-full border border-brand-body1 rounded-lg rounded-r-none"
             >
-              <img src="./assets/img/icons/image.svg" alt="Icon Image" />
+              <img src="/assets/img/icons/image.svg" alt="Icon Image" />
               <span class="hidden md:block text-sm flex-1">Images</span>
-              <img src="./assets/img/icons/arrow-down.svg" alt="Icon Arrow" />
+              <img src="/assets/img/icons/arrow-down.svg" alt="Icon Arrow" />
             </button>
             <input
               class="h-full w-full px-6 border-y border-brand-body1"
               placeholder="Travel"
             />
           </div>
-          <button
-            type="submit"
+          <a
+            href="/searchpage"
             class="bg-black h-full flex items-center px-3 cursor-pointer rounded-lg rounded-l-none"
           >
-            <img
-              src="./assets/img/icons/search-outline.svg"
-              alt="Icon Search"
-            />
-          </button>
+            <img src="/assets/img/icons/search-outline.svg" alt="Icon Search" />
+          </a>
         </div>
       </form>
       <button
@@ -46,7 +43,7 @@
         class="hidden md:block px-2 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
       >
         <img
-          src="./assets/img/icons/image-search.svg"
+          src="/assets/img/icons/image-search.svg"
           alt="Icon Image Reverse"
         />
       </button>
@@ -83,13 +80,13 @@
     </div>
     <div class="flex items-center gap-2 lg:hidden">
       <img
-        src="./assets/img/icons/search-outline-black.svg"
+        src="/assets/img/icons/search-outline-black.svg"
         class="cursor-pointer p-2.5 md:hidden"
         data-toggle="header-search"
         alt="Icon Search"
       />
       <img
-        src="./assets/img/icons/menu.svg"
+        src="/assets/img/icons/menu.svg"
         alt="Icon Menu"
         class="cursor-pointer p-2.5 toggle-menu-mobile"
       />

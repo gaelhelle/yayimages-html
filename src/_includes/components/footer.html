@@ -5,7 +5,7 @@
         <div class="flex flex-col flex-1 md:grid md:grid-cols-3">
           <div class="order-4 md:order-1">
             <img
-              src="./assets/img/logo/logo-text-white.svg"
+              src="/assets/img/logo/logo-text-white.svg"
               alt="YAYImages Logo"
               class="hidden md:block"
             />
@@ -22,7 +22,7 @@
                 <a href="#">
                   Help
                   <img
-                    src="./assets/img/icons/help-circle.svg"
+                    src="/assets/img/icons/help-circle.svg"
                     alt="Icon help"
                   />
                 </a>
@@ -110,23 +110,20 @@
           </h4>
           <ul class="flex items-center gap-2 mt-4">
             <li>
-              <img src="./assets/img/payments/Amex.svg" alt="Amex" />
+              <img src="/assets/img/payments/Amex.svg" alt="Amex" />
             </li>
             <li>
-              <img src="./assets/img/payments/Visa.svg" alt="Visa" />
+              <img src="/assets/img/payments/Visa.svg" alt="Visa" />
             </li>
             <li>
-              <img
-                src="./assets/img/payments/Mastercard.svg"
-                alt="Mastercard"
-              />
+              <img src="/assets/img/payments/Mastercard.svg" alt="Mastercard" />
             </li>
           </ul>
         </div>
       </div>
       <div class="text-center font-light mt-24">
         <img
-          src="./assets/img/logo/logo-text-white.svg"
+          src="/assets/img/logo/logo-text-white.svg"
           alt="YAYImages Logo"
           class="mx-auto mb-10 md:hidden"
         />
@@ -135,3 +132,125 @@
     </div>
   </div>
 </footer>
+
+<div
+  id="menu-signup"
+  class="fixed top-0 pt-10 z-[90] h-screen w-full hidden overflow-y-scroll"
+>
+  <div class="p-4 lg:p-8">
+    <div
+      class="bg-white rounded-lg p-7 lg:p-10 relative w-full max-w-[500px] mx-auto shadow-modal"
+    >
+      <button class="toggle-menu-signup absolute top-4 right-4">
+        <img src="./assets/img/icons/close.svg" alt="Icon Close" class="p-4" />
+      </button>
+      <div class="text-center">
+        <h4 class="text-2xl mb-4 font-semibold">Welcome!</h4>
+        <p class="text-lg mb-4 font-inter">
+          Create your account to gain download access
+        </p>
+        <form>
+          <div class="text-left flex flex-col md:grid md:grid-cols-2 gap-3">
+            <input
+              placeholder="First name *"
+              class="rounded-lg border px-5 py-3"
+            />
+            <input
+              placeholder="Last name*"
+              class="rounded-lg border px-5 py-3"
+            />
+            <input
+              placeholder="Email address *"
+              class="col-span-2 rounded-lg border px-5 py-3"
+            />
+            <input
+              placeholder="Create password *"
+              type="password"
+              class="col-span-2 rounded-lg border px-5 py-3"
+            />
+          </div>
+          <button
+            class="toggle-menu-signup rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center mx-auto w-full max-w-[300px]"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <div class="text-center mt-6 text-brand-body1 text-sm">
+          <div>
+            Already have an account?
+            <a href="#" class="text-brand-accent font-bold">Login</a>
+          </div>
+          <div class="mt-4 font-inter">
+            By clicking Subscribe you are agreeing to our
+            <a>Terms & Conditions</a> and our <a>Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="menu-mobile"
+  class="fixed top-0 pt-10 z-[90] w-full h-screen hidden overflow-y-scroll"
+>
+  <div class="p-4 lg:p-8">
+    <div
+      class="bg-white rounded-lg shadow-2xl p-7 lg:p-10 relative w-full max-w-[500px] mx-auto"
+    >
+      <img
+        src="./assets/img/icons/close.svg"
+        alt="Icon Close"
+        class="toggle-menu-mobile absolute right-4 top-4 p-4 z-10"
+      />
+      <div>
+        <a
+          href=""
+          class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+        >
+          <img
+            src="./assets/img/icons/menu-images.svg"
+            alt="Icon Images"
+          />Images
+        </a>
+        <a
+          href=""
+          class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+        >
+          <img
+            src="./assets/img/icons/menu-videos.svg"
+            alt="Icon Videos"
+          />Videos
+        </a>
+        <a
+          href=""
+          class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+        >
+          <img
+            src="./assets/img/icons/menu-vectors.svg"
+            alt="Icon Vectors"
+          />Vectors
+        </a>
+        <a
+          href=""
+          class="flex items-center gap-4 py-6 border-b border-brand-xl-lightgray"
+        >
+          <img
+            src="./assets/img/icons/menu-pricing.svg"
+            alt="Icon Pricing"
+          />Pricing
+        </a>
+      </div>
+      <button
+        class="toggle-menu-signup rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center w-full"
+      >
+        Sign Up
+      </button>
+      <div class="text-center mt-6 text-brand-body1 text-sm">
+        Already have an account?
+        <a href="#" class="text-brand-accent font-bold">Login</a>
+      </div>
+    </div>
+  </div>
+</div>
