@@ -1,7 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["*.{html,js,ts}"],
   theme: {
+    screens: {
+      xs: "500px",
+      ...defaultTheme.screens,
+    },
     extend: {
       container: {
         maxWidth: "1480px !important",
@@ -17,6 +24,9 @@ module.exports = {
       },
       transitionProperty: {
         width: "width",
+      },
+      boxShadow: {
+        modal: "0 18px 30px 0 rgba(48, 69, 122, 0.31)",
       },
     },
   },

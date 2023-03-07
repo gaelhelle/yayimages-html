@@ -1,16 +1,13 @@
 // Accordions toggle
 const accordions = document.querySelectorAll('[data-toggle="collapse"]');
 const toggleSection = (section) => {
-    const accordion = document.querySelector(`[data-target="#${section.id}"]`);
-    const accordionIndicator = accordion.querySelector(".accordion-arrow");
+    const accordion = document
+        .querySelector(`[data-target="#${section.id}"]`)
+        .closest(".accordion-item");
     accordion.classList.toggle("open");
-    accordionIndicator.classList.toggle("rotate-180");
     section.style.opacity = "0";
     section.classList.toggle("hidden");
-    section.classList.toggle("duration-500");
-    section.classList.toggle("transition");
     if (!section.classList.contains("hidden")) {
-        // section.style.maxHeight = section.scrollHeight + "px";
         section.style.opacity = "1";
     }
     else {

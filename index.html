@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -41,10 +41,10 @@
                 >
                   <button
                     type="button"
-                    class="flex shrink-0 gap-2 items-center bg-brand-xl-lightgray px-5 cursor-pointer xl:min-w-[150px] h-full border border-brand-body1 rounded-md rounded-r-none"
+                    class="flex shrink-0 gap-2 items-center bg-brand-xl-lightgray px-5 cursor-pointer xl:min-w-[150px] h-full border border-brand-body1 rounded-lg rounded-r-none"
                   >
                     <img src="./assets/img/icons/image.svg" alt="Icon Image" />
-                    <span class="hidden xl:block text-sm flex-1">Images</span>
+                    <span class="hidden md:block text-sm flex-1">Images</span>
                     <img
                       src="./assets/img/icons/arrow-down.svg"
                       alt="Icon Arrow"
@@ -57,7 +57,7 @@
                 </div>
                 <button
                   type="submit"
-                  class="bg-black h-full flex items-center px-3 cursor-pointer rounded-md rounded-l-none"
+                  class="bg-black h-full flex items-center px-3 cursor-pointer rounded-lg rounded-l-none"
                 >
                   <img
                     src="./assets/img/icons/search-outline.svg"
@@ -127,11 +127,7 @@
             <button
               class="toggle-filter-sidebar sidebar-arrow-indicator--fixed bg-black rounded-r-lg fixed top-[122px] left-0 h-11 w-9 flex items-center justify-center cursor-pointer"
             >
-              <img
-                src="./assets/img/icons/arrow-down-white.svg"
-                alt="Icon Arrow"
-                class="-rotate-90"
-              />
+              <img src="./assets/img/icons/filters-open.svg" alt="Icon Arrow" />
             </button>
 
             <div
@@ -178,9 +174,9 @@
                   class="top-[var(--sidebar-filter-offset-y)] border-2 border-black border-l-0 border-b-0"
                 >
                   <ul class="divide-y-2 divide-black border-b-2 border-black">
-                    <li>
+                    <li class="accordion-item open">
                       <button
-                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer group open"
+                        class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
                         data-target="#filter-tier"
                       >
@@ -191,11 +187,14 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-tier" class="hidden lg:pl-16 px-5 pb-5">
+                      <div
+                        id="filter-tier"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
+                      >
                         <span class="text-black/30">Not available yet</span>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -210,11 +209,11 @@
                       </button>
                       <div
                         id="filter-media-type"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div class="grid grid-cols-2 gap-2">
                           <button
-                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm flex justify-center items-center gap-1.5"
+                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-2 text-brand-accent text-xs flex font-inter items-center gap-1.5"
                           >
                             <img
                               src="./assets/img/icons/image-accent.svg"
@@ -224,7 +223,7 @@
                             All Images
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-2 text-brand-body1 text-xs flex font-inter items-center gap-1.5"
                           >
                             <img
                               src="./assets/img/icons/photos.svg"
@@ -234,7 +233,7 @@
                             Photos
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-2 text-brand-body1 text-xs flex font-inter items-center gap-1.5"
                           >
                             <img
                               src="./assets/img/icons/menu-vectors.svg"
@@ -244,7 +243,7 @@
                             Vectors
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-2 text-brand-body1 text-xs flex font-inter items-center gap-1.5"
                           >
                             <img
                               src="./assets/img/icons/editorial.svg"
@@ -254,7 +253,7 @@
                             Editorial
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm flex justify-center items-center gap-1.5"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-2 text-brand-body1 text-xs flex font-inter items-center gap-1.5"
                           >
                             <img
                               src="./assets/img/icons/menu-videos.svg"
@@ -266,7 +265,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -281,10 +280,12 @@
                       </button>
                       <div
                         id="filter-orientation"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div class="flex flex-col gap-2 text-brand-body1">
-                          <label>
+                          <label
+                            class="flex items-center gap-2 font-inter text-sm"
+                          >
                             <input
                               type="radio"
                               name="filter-orientation"
@@ -293,7 +294,9 @@
                             />
                             Horizontal</label
                           >
-                          <label>
+                          <label
+                            class="flex items-center gap-2 font-inter text-sm"
+                          >
                             <input
                               type="radio"
                               name="filter-orientation"
@@ -301,7 +304,9 @@
                             />
                             Vertical</label
                           >
-                          <label>
+                          <label
+                            class="flex items-center gap-2 font-inter text-sm"
+                          >
                             <input
                               type="radio"
                               name="filter-orientation"
@@ -309,7 +314,9 @@
                             />
                             Portrait</label
                           >
-                          <label>
+                          <label
+                            class="flex items-center gap-2 font-inter text-sm"
+                          >
                             <input
                               type="radio"
                               name="filter-orientation"
@@ -320,7 +327,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -333,37 +340,40 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-people" class="hidden lg:pl-16 px-5 pb-5">
+                      <div
+                        id="filter-people"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
+                      >
                         <div class="flex gap-2 justify-between">
                           <button
-                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent text-sm"
+                            class="filter-button rounded-lg border-brand-accent border-2 px-3 py-1.5 text-brand-accent font-inter text-sm"
                           >
                             Any
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 font-inter text-sm"
                           >
                             0
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 font-inter text-sm"
                           >
                             1
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 font-inter text-sm"
                           >
                             2
                           </button>
                           <button
-                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 text-sm"
+                            class="filter-button rounded-lg border-brand-body1 border px-3 py-1.5 text-brand-body1 font-inter text-sm"
                           >
                             3+
                           </button>
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -376,7 +386,10 @@
                           class="accordion-arrow"
                         />
                       </button>
-                      <div id="filter-color" class="hidden lg:pl-16 px-5 pb-5">
+                      <div
+                        id="filter-color"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
+                      >
                         <div class="relative">
                           <div class="container-color"></div>
                           <input
@@ -386,7 +399,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -401,7 +414,7 @@
                       </button>
                       <div
                         id="filter-exclude-keywords"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div>
                           <input
@@ -411,7 +424,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -426,7 +439,7 @@
                       </button>
                       <div
                         id="filter-text-space"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div>
                           <div
@@ -466,7 +479,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -481,7 +494,7 @@
                       </button>
                       <div
                         id="filter-username"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div>
                           <input
@@ -497,7 +510,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="accordion-item open">
                       <button
                         class="w-full flex items-center justify-between text-lg lg:pl-16 px-6 py-5 cursor-pointer"
                         data-toggle="collapse"
@@ -512,7 +525,7 @@
                       </button>
                       <div
                         id="filter-date-added"
-                        class="hidden lg:pl-16 px-5 pb-5"
+                        class="accordion-inner lg:pl-16 px-5 pb-5"
                       >
                         <div>
                           <div class="text-xs text-brand-body1 mb-4">
@@ -1083,7 +1096,7 @@
     >
       <div class="p-4 lg:p-8">
         <div
-          class="bg-white rounded-lg shadow-2xl p-7 lg:p-10 relative w-full max-w-[500px] mx-auto"
+          class="bg-white rounded-lg p-7 lg:p-10 relative w-full max-w-[500px] mx-auto shadow-modal"
         >
           <button class="toggle-menu-signup absolute top-4 right-4">
             <img
@@ -1093,8 +1106,8 @@
             />
           </button>
           <div class="text-center">
-            <h4 class="text-2xl mb-4">Welcome!</h4>
-            <p class="text-lg mb-4">
+            <h4 class="text-2xl mb-4 font-semibold">Welcome!</h4>
+            <p class="text-lg mb-4 font-inter">
               Create your account to gain download access
             </p>
             <form>
@@ -1129,7 +1142,7 @@
                 Already have an account?
                 <a href="#" class="text-brand-accent font-bold">Login</a>
               </div>
-              <div class="mt-4">
+              <div class="mt-4 font-inter">
                 By clicking Subscribe you are agreeing to our
                 <a>Terms & Conditions</a> and our <a>Privacy Policy</a>
               </div>

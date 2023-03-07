@@ -12,7 +12,11 @@ body {
 }
 
 .container-fluid {
-  @apply max-w-none w-full px-8 lg:px-16;
+  @apply max-w-none w-full px-6 lg:px-10;
+}
+
+.page-content.container-fluid {
+  @apply lg:px-14;
 }
 
 .aside-filters {
@@ -59,11 +63,31 @@ body {
   @apply bg-brand-accent shadow-none;
 }
 
-@media screen(lg) {
+input {
+  @apply text-sm;
+}
+
+input[type="radio"] {
+  @apply accent-brand-accent w-4 h-4;
+}
+
+input,
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.accordion-item.open .accordion-arrow {
+  @apply rotate-180;
+}
+
+@media screen(md) {
   :root {
     --header-height: 100px;
     --sidebar-filter-offset-y: 100px;
   }
+}
+
+@media screen(lg) {
   .page-with-sidebar.open .page-content {
     @apply pl-16;
   }
