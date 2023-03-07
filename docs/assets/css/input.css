@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 72px;
+  --sidebar-filter-offset-y: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+.container-fluid {
+  @apply max-w-none w-full px-6 lg:px-10;
+}
+
+.page-content.container-fluid {
+  @apply lg:px-14;
+}
+
+.aside-filters {
+  @apply flex-1 z-10 top-0 bg-white grow-0;
+  @apply max-lg:fixed max-lg:w-screen max-lg:h-screen max-lg:z-[120];
+  @apply lg:block;
+}
+
+.sidebar-search-inner {
+  @apply w-full lg:w-[20vw] lg:min-w-[310px] lg:max-w-[400px] sticky top-[100px] lg:top-[167px] overflow-x-hidden overflow-y-scroll;
+  @apply max-h-[calc(100vh_-_100px)] lg:max-h-[calc(100vh_-_171px)];
+}
+
+.page-with-sidebar:not(.open) .aside-filters {
+  @apply max-lg:hidden;
+}
+.page-with-sidebar:not(.open) .aside-filters .sidebar-search-container {
+  @apply hidden;
+}
+.page-with-sidebar.open .sidebar-arrow-indicator--fixed {
+  @apply hidden;
+}
+
+.page-with-sidebar.open .sidebar-arrow-indicator {
+  @apply rotate-90;
+}
+
+.item-element:not(.selected) .folder-selected {
+  @apply hidden;
+}
+.item-element.selected .folder-item {
+  @apply opacity-100;
+}
+
+.item-element.selected .folder-default {
+  @apply hidden;
+}
+
+.item-element.selected .folder-item {
+  @apply bg-white;
+}
+
+.text-space-item.active {
+  @apply bg-brand-accent shadow-none;
+}
+
+input {
+  @apply text-sm;
+}
+
+input[type="radio"] {
+  @apply accent-brand-accent w-4 h-4;
+}
+
+input,
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.accordion-item.open .accordion-arrow {
+  @apply rotate-180;
+}
+
+@media screen(md) {
+  :root {
+    --header-height: 100px;
+    --sidebar-filter-offset-y: 100px;
+  }
+}
+
+@media screen(lg) {
+  .page-with-sidebar.open .page-content {
+    @apply pl-16;
+  }
+}
+
+.container-color .clr-picker {
+  @apply shadow-none w-full;
+}
+.container-color .clr-gradient {
+  @apply rounded-lg;
+}
+.container-color .clr-alpha,
+.container-color .clr-hue {
+  @apply m-0 w-full h-[16px] rounded-full;
+}
+
+.container-color .clr-preview {
+  @apply hidden;
+}
+
+.container-color .clr-color {
+  @apply rounded-lg border-brand-body1 mt-4 w-full m-0;
+}
+
+/*
+.scrollable-inner * {
+  scrollbar-width: thin;
+  scrollbar-color: #a5b7c6 transparent;
+}
+
+.scrollable-inner *::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollable-inner *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-inner *::-webkit-scrollbar-thumb {
+  background-color: #a5b7c6;
+  border: 3px solid transparent;
+}
+*/
