@@ -13,13 +13,13 @@ title: "YAYImages - HTML Template - Search Page"
   <div class="home">
     <div class="container mx-auto relative">
       <div class="flex justify-between relative">
-        <div class="mt-48">
+        <div class="mt-32 lg:mt-48">
           <div class="max-w-[500px]">
-            <h1 class="capitalize text-5xl font-bold leading-tight">
+            <h1 class="capitalize text-3xl lg:text-5xl font-bold leading-tight">
               Stock Assets for your
               <span class="text-brand-accent">creative</span> projects
             </h1>
-            <p class="my-10 text-xl">
+            <p class="my-10 lg:text-xl">
               <span class="text-brand-accent">13.5</span> Million Royalty-Free
               Stock Photos, Vectors and Videos from
               <span class="text-brand-accent">18,000</span> photographers from
@@ -28,12 +28,12 @@ title: "YAYImages - HTML Template - Search Page"
 
             {{ Button.btn("Start Downloading") }}
           </div>
-          <div class="flex items-center mt-24 py-10">
-            <span class="text-brand-body1 font-inter text-sm mr-4"
+          <div class="flex flex-col md:flex-row mditems-center mt-24 py-10">
+            <span class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0"
               >Trusted by
             </span>
 
-            <ul class="flex items-center gap-4">
+            <ul class="flex items-center gap-4 flex-wrap justify-center">
               <li>
                 <img src="../assets/img/trustedby/vimeo.png" alt="Vimeo" />
               </li>
@@ -92,11 +92,13 @@ title: "YAYImages - HTML Template - Search Page"
 
     <section class="py-16">
       <div class="container mx-auto relative">
-        <h3 class="typography-h3 text-center mb-6 md:mb-16">
+        <h3 class="typography-h3 text-center mb-6 md:mb-12">
           Words from our users:
         </h3>
+      </div>
+      <div class="md:container mx-auto relative">
         <div
-          class="flex gap-8 md:gap-10 xl:gap-20 overflow-scroll lg:overflow-visible snap-mandatory snap-x px-6 md:px-16 lg:px-0 lg:mx-0 py-10 scrollbar-hide -mx-6 md:mx-0"
+          class="flex gap-10 xl:gap-20 overflow-scroll lg:overflow-visible snap-mandatory snap-x px-10 md:px-16 lg:px-0 l py-10 scrollbar-hide"
         >
           {{ Review.item("Sandrita", "Sept. 12th 2021", "5", "It is a great
           product. I recommend it to everyone. I bought it recently and the

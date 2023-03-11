@@ -676,11 +676,6 @@ video {
   margin-right: -2.5rem;
 }
 
-.-mx-6 {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -689,11 +684,6 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.-mx-7 {
-  margin-left: -1.75rem;
-  margin-right: -1.75rem;
 }
 
 .-mb-1 {
@@ -726,6 +716,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -764,12 +758,12 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-32 {
+  margin-top: 8rem;
 }
 
-.mt-48 {
-  margin-top: 12rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -1325,11 +1319,6 @@ video {
   padding-right: 2.5rem;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -1400,11 +1389,6 @@ video {
   padding-bottom: 9rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1453,9 +1437,8 @@ video {
   font-size: 0.675rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-3xl {
+  font-size: 1.75rem;
 }
 
 .text-lg {
@@ -1812,6 +1795,10 @@ input,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.accordion-item:not(.open) .accordion-inner {
+  display: none;
+}
+
 #section-access {
   background: url("../assets/img/bg-access-section.jpg") top center repeat-x;
   margin-top: -6rem;
@@ -1824,6 +1811,13 @@ input,
 
 #section-hero-search .header-searchbar {
   height: 58px;
+}
+
+@media only screen and (max-width: md) {
+  .typography-h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2022,17 +2016,16 @@ input,
     order: 1;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mb-12 {
+    margin-bottom: 3rem;
   }
 
   .md\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .md\:mb-16 {
-    margin-bottom: 4rem;
   }
 
   .md\:block {
@@ -2067,8 +2060,8 @@ input,
     flex-direction: row;
   }
 
-  .md\:gap-10 {
-    gap: 2.5rem;
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:border-0 {
@@ -2108,12 +2101,16 @@ input,
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+  .lg\:mt-48 {
+    margin-top: 12rem;
   }
 
   .lg\:block {
@@ -2132,10 +2129,6 @@ input,
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .lg\:gap-20 {
-    gap: 5rem;
-  }
-
   .lg\:overflow-visible {
     overflow: visible;
   }
@@ -2148,18 +2141,38 @@ input,
     padding: 2rem;
   }
 
-  .lg\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
 
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lg\:pl-16 {
     padding-left: 4rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2172,6 +2185,10 @@ input,
     min-width: 150px;
   }
 
+  .xl\:gap-20 {
+    gap: 5rem;
+  }
+
   .xl\:gap-32 {
     gap: 8rem;
   }
@@ -2182,10 +2199,6 @@ input,
 
   .xl\:gap-5 {
     gap: 1.25rem;
-  }
-
-  .xl\:gap-20 {
-    gap: 5rem;
   }
 }
 

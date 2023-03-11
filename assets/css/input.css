@@ -110,6 +110,10 @@ input,
   @apply rotate-180;
 }
 
+.accordion-item:not(.open) .accordion-inner {
+  @apply hidden;
+}
+
 #section-access {
   background: url("../assets/img/bg-access-section.jpg") top center repeat-x;
   @apply pt-24 -mt-24;
@@ -121,6 +125,12 @@ input,
 
 #section-hero-search .header-searchbar {
   @apply h-[58px];
+}
+
+@media only screen and (max-width: md) {
+  .typography-h3 {
+    @apply text-2xl;
+  }
 }
 
 @media screen(md) {

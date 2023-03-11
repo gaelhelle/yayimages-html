@@ -6,8 +6,7 @@ const toggleSection = (section) => {
         .closest(".accordion-item");
     accordion.classList.toggle("open");
     section.style.opacity = "0";
-    section.classList.toggle("hidden");
-    if (!section.classList.contains("hidden")) {
+    if (!accordion.classList.contains("hidden")) {
         section.style.opacity = "1";
     }
     else {
