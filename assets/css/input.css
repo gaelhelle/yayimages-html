@@ -21,18 +21,32 @@ body {
 
 .home {
   background: url("../assets/img/bg-home.png") top center/cover;
+  background-position: left -210px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.typography-h1 {
+  @apply text-5xl font-extrabold capitalize;
 }
 
 .typography-h3 {
-  @apply text-3xl font-semibold;
+  @apply text-3xl font-semibold capitalize;
 }
 
 .typography-h4 {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-semibold capitalize;
 }
 
 .typography-h5 {
-  @apply text-xl font-medium;
+  @apply text-xl font-medium capitalize;
 }
 
 .aside-filters {
@@ -101,7 +115,19 @@ input,
   @apply pt-24 -mt-24;
 }
 
+#section-hero-search {
+  background: url("../assets/img/home/bg-search-section.jpg") top center/cover;
+}
+
+#section-hero-search .header-searchbar {
+  @apply h-[58px];
+}
+
 @media screen(md) {
+  .home {
+    background-position: top center;
+  }
+
   :root {
     --header-height: 100px;
     --sidebar-filter-offset-y: 100px;

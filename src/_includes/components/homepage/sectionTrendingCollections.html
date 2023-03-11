@@ -1,0 +1,37 @@
+{% import "components/homepage/collection.html" as Collection %}
+
+<section class="py-16">
+  <div class="container mx-auto relative">
+    <header>
+      <h3 class="typography-h3 flex items-center gap-4">
+        Trending Collections
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-brand-accent"
+        >
+          <path
+            d="M21.4998 7.5C21.5093 7.43032 21.5093 7.35968 21.4998 7.29C21.4911 7.23129 21.4743 7.17407 21.4498 7.12C21.4234 7.07113 21.3933 7.02433 21.3598 6.98C21.3218 6.91675 21.2746 6.85947 21.2198 6.81L21.0998 6.74C21.0421 6.69696 20.978 6.66321 20.9098 6.64H20.7098C20.6489 6.58099 20.5777 6.53356 20.4998 6.5H15.4998C15.2346 6.5 14.9802 6.60536 14.7927 6.79289C14.6052 6.98043 14.4998 7.23478 14.4998 7.5C14.4998 7.76522 14.6052 8.01957 14.7927 8.20711C14.9802 8.39464 15.2346 8.5 15.4998 8.5H18.3298L14.3298 13.21L10.0098 10.64C9.80519 10.5183 9.56387 10.4736 9.32923 10.5139C9.0946 10.5542 8.88205 10.677 8.72981 10.86L3.72981 16.86C3.64561 16.961 3.58217 17.0777 3.54312 17.2033C3.50408 17.3289 3.49019 17.461 3.50227 17.592C3.51435 17.7229 3.55214 17.8503 3.61349 17.9666C3.67485 18.0829 3.75855 18.1861 3.85981 18.27C4.03972 18.4191 4.26616 18.5005 4.49981 18.5C4.64672 18.5002 4.79188 18.4681 4.92496 18.4059C5.05804 18.3437 5.17578 18.2529 5.26981 18.14L9.71981 12.8L13.9898 15.36C14.1923 15.4801 14.4308 15.5249 14.6631 15.4865C14.8954 15.4481 15.1067 15.3289 15.2598 15.15L19.4998 10.2V12.5C19.4998 12.7652 19.6052 13.0196 19.7927 13.2071C19.9802 13.3946 20.2346 13.5 20.4998 13.5C20.765 13.5 21.0194 13.3946 21.2069 13.2071C21.3945 13.0196 21.4998 12.7652 21.4998 12.5V7.5Z"
+          />
+        </svg>
+      </h3>
+      <p class="font-inter text-xl mt-4 mb-6">
+        Check out the collections getting the most love
+      </p>
+    </header>
+    <div
+      class="flex gap-6 overflow-scroll snap-mandatory snap-x scrollbar-hide flex-nowrap"
+    >
+      {{ Collection.item("Christmas",
+      "../assets/img/collections/christmas.webp") }}{{ Collection.item("Dog",
+      "../assets/img/collections/dog.webp") }}{{ Collection.item("Nature",
+      "../assets/img/collections/nature.webp") }}{{ Collection.item("Wildlife",
+      "../assets/img/collections/wildlife.webp") }}{{ Collection.item("Winter
+      Sports", "../assets/img/collections/wintersports.webp") }}{{
+      Collection.item("Travel", "../assets/img/collections/travel.webp") }}
+    </div>
+  </div>
+</section>

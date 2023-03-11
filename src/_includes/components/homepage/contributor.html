@@ -1,0 +1,26 @@
+{% macro item(user, resources, description, url) %}
+<div
+  class="min-w-[320px] rounded-lg bg-white shadow-[0px_3px_5px_0px_rgba(102,102,102,0.2)] hover:shadow-none transition duration-700"
+>
+  <a
+    href="#"
+    class="h-[250px] rounded-t-lg group relative block w-full overflow-hidden"
+  >
+    <div
+      class="absolute h-full w-full bg-gradient-radial from-black/0 to-black/80 transition duration-500 ease-in-expo opacity-0 group-hover:opacity-50 z-10"
+    ></div>
+    <img
+      src="{{url}}"
+      class="absolute top-0 left-0 object-cover h-full w-full bg-brand-blank"
+      alt="{{user}} Profile Image"
+    />
+  </a>
+  <div class="font-inter text-brand-body1 p-4 text-sm">
+    <div class="flex items-center justify-between mb-4">
+      <h6>By <a href="#" class="font-medium underline">{{user}}</a></h6>
+      <div class="font-light">{{resources}} resources</div>
+    </div>
+    <p>{{description}}</p>
+  </div>
+</div>
+{% endmacro %}

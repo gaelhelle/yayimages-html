@@ -1,9 +1,9 @@
 {% macro item(title, description, url) %}
-<div class="w-1/4 text-center flex flex-col gap-8">
+<div class="w-full text-center flex flex-col gap-8">
   <div class="h-44 flex items-center justify-center">
     <img src="{{url}}" alt="{{title}}" class="inline-block" />
   </div>
   <h4 class="typography-h4">{{title}}</h4>
-  <p class="font-inter text-lg text-brand-body1">{{description | safe}}</p>
+  <p class="font-inter md:text-lg text-brand-body1">{{description | safe}}</p>
 </div>
 {% endmacro %}

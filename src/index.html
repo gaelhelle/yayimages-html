@@ -4,7 +4,6 @@ title: "YAYImages - HTML Template - Search Page"
 ---
 
 {% import "components/button.html" as Button %} {% import
-"components/homepage/contentLibraryItem.html" as ContentLibraryItem %} {% import
 "components/homepage/review.html" as Review %} {% import
 "components/homepage/feature.html" as Feature %}
 
@@ -60,30 +59,12 @@ title: "YAYImages - HTML Template - Search Page"
       </div>
     </div>
 
-    <section class="py-16 bg-[#E3F4FF]/60 relative z-10">
-      <div class="container mx-auto relative">
-        <div class="max-w-[600px]">
-          <h3 class="typography-h3">Explore our content library</h3>
-          <p class="font-inter text-xl mt-4 mb-6">
-            Beautifuly shot, creatively made. Explore our wide library of assets
-            or browse our curated collections.
-          </p>
-        </div>
-        <div class="flex justify-between gap-20 xl:gap-32">
-          {{ ContentLibraryItem.item("Stock Images", "12 million+ Stock Images",
-          "../assets/img/home/stock-images.jpg") }} {{
-          ContentLibraryItem.item("Stock Videos", "250k+ HD Videos",
-          "../assets/img/home/stock-videos.jpg") }} {{
-          ContentLibraryItem.item("Stock Vectors", "2.5+ million Vectors",
-          "../assets/img/home/stock-vectors.jpg") }}
-        </div>
-      </div>
-    </section>
+    {% include "components/homepage/sectionContent.html" %}
 
     <section class="py-16">
       <div class="container mx-auto relative">
         <h3
-          class="typography-h3 flex items-center text-center justify-center mb-16"
+          class="typography-h3 flex flex-wrap items-center text-center justify-center mb-16"
         >
           With
           <img
@@ -92,7 +73,7 @@ title: "YAYImages - HTML Template - Search Page"
           />
           you can:
         </h3>
-        <div class="flex gap-8">
+        <div class="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-8">
           {{ Feature.item("Cancel at any time", "Cancel your subscritpion
           whenever you feel like it. <br />
           No strings attached. ", "../assets/img/icons/feature-cancel.svg") }}
@@ -111,8 +92,12 @@ title: "YAYImages - HTML Template - Search Page"
 
     <section class="py-16">
       <div class="container mx-auto relative">
-        <h3 class="typography-h3 text-center mb-16">Words from our users:</h3>
-        <div class="flex gap-20">
+        <h3 class="typography-h3 text-center mb-6 md:mb-16">
+          Words from our users:
+        </h3>
+        <div
+          class="flex gap-8 md:gap-10 xl:gap-20 overflow-scroll lg:overflow-visible snap-mandatory snap-x px-6 md:px-16 lg:px-0 lg:mx-0 py-10 scrollbar-hide -mx-6 md:mx-0"
+        >
           {{ Review.item("Sandrita", "Sept. 12th 2021", "5", "It is a great
           product. I recommend it to everyone. I bought it recently and the
           images look great to me. I think it is an offer that is worth buying
@@ -129,7 +114,7 @@ title: "YAYImages - HTML Template - Search Page"
     </section>
 
     <section id="section-access" class="py-16">
-      <div class="container mx-auto relative text-center">
+      <div class="md:container mx-auto relative text-center">
         <div class="bg-[#E3F4FF] p-14 rounded-md">
           <div class="flex flex-col gap-6 max-w-[700px] mx-auto">
             <h3 class="typography-h3">

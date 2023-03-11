@@ -170,8 +170,9 @@ for (const buttonTextSpace of buttonsTextSpace) {
 }
 
 const loadMobile = () => {
-  if (window.innerWidth < 1024) {
-    document.querySelector(".page-with-sidebar").classList.toggle("open");
+  const pageSidebarContainer = document.querySelector(".page-with-sidebar");
+  if (window.innerWidth < 1024 && pageSidebarContainer) {
+    pageSidebarContainer.classList.toggle("open");
   }
 };
 

@@ -10,6 +10,10 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      fontSize: {
+        "3xl": "1.75rem",
+        "2xs": "0.675rem",
+      },
       container: {
         maxWidth: "1480px !important",
         padding: "2rem",
@@ -20,6 +24,7 @@ module.exports = {
           "xl-lightgray": "#F1F3F8",
           accent: "#3A4DF1",
           accentDark: "#2B38AE",
+          blank: "#D9D9D9",
         },
         black: "#111827",
       },
