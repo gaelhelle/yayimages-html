@@ -16,7 +16,23 @@ body {
 }
 
 .page-content.container-fluid {
-  @apply lg:px-14;
+  @apply lg:px-16;
+}
+
+.home {
+  background: url("../assets/img/bg-home.png") top center/cover;
+}
+
+.typography-h3 {
+  @apply text-3xl font-semibold;
+}
+
+.typography-h4 {
+  @apply text-2xl font-semibold;
+}
+
+.typography-h5 {
+  @apply text-xl font-medium;
 }
 
 .aside-filters {
@@ -80,6 +96,11 @@ input,
   @apply rotate-180;
 }
 
+#section-access {
+  background: url("../assets/img/bg-access-section.jpg") top center repeat-x;
+  @apply pt-24 -mt-24;
+}
+
 @media screen(md) {
   :root {
     --header-height: 100px;
@@ -110,6 +131,23 @@ input,
 
 .container-color .clr-color {
   @apply rounded-lg border-brand-body1 mt-4 w-full m-0;
+}
+
+.col-hero-carousel {
+  animation: bannermove 30s linear infinite;
+}
+
+.backdrop-carousel {
+  mask: linear-gradient(to bottom, transparent, white 60%);
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateY(calc(-50% - 10px));
+  }
 }
 
 /*

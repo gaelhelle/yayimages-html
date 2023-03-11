@@ -3,6 +3,146 @@ layout: layouts/base.html
 title: "YAYImages - HTML Template - Search Page"
 ---
 
+{% import "components/button.html" as Button %} {% import
+"components/homepage/contentLibraryItem.html" as ContentLibraryItem %} {% import
+"components/homepage/review.html" as Review %} {% import
+"components/homepage/feature.html" as Feature %}
+
 <main>
-  <div class="h-80 flex items-center justify-center">Index</div>
+  {% include "components/homepage/salebanner.html" %}
+
+  <div class="home">
+    <div class="container mx-auto relative">
+      <div class="flex justify-between relative">
+        <div class="mt-48">
+          <div class="max-w-[500px]">
+            <h1 class="capitalize text-5xl font-bold leading-tight">
+              Stock Assets for your
+              <span class="text-brand-accent">creative</span> projects
+            </h1>
+            <p class="my-10 text-xl">
+              <span class="text-brand-accent">13.5</span> Million Royalty-Free
+              Stock Photos, Vectors and Videos from
+              <span class="text-brand-accent">18,000</span> photographers from
+              <span class="text-brand-accent">145+</span> countries
+            </p>
+
+            {{ Button.btn("Start Downloading") }}
+          </div>
+          <div class="flex items-center mt-24 py-10">
+            <span class="text-brand-body1 font-inter text-sm mr-4"
+              >Trusted by
+            </span>
+
+            <ul class="flex items-center gap-4">
+              <li>
+                <img src="../assets/img/trustedby/vimeo.png" alt="Vimeo" />
+              </li>
+              <li>
+                <img src="../assets/img/trustedby/appsumo.png" alt="Appsumo" />
+              </li>
+              <li>
+                <img src="../assets/img/trustedby/shotkit.png" alt="Shotkit" />
+              </li>
+              <li>
+                <img
+                  src="../assets/img/trustedby/genially.png"
+                  alt="Genially"
+                />
+              </li>
+              <li>
+                <img src="../assets/img/trustedby/match.png" alt="Match" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>{% include "components/homepage/heroCarousel.html" %}</div>
+      </div>
+    </div>
+
+    <section class="py-16 bg-[#E3F4FF]/60 relative z-10">
+      <div class="container mx-auto relative">
+        <div class="max-w-[600px]">
+          <h3 class="typography-h3">Explore our content library</h3>
+          <p class="font-inter text-xl mt-4 mb-6">
+            Beautifuly shot, creatively made. Explore our wide library of assets
+            or browse our curated collections.
+          </p>
+        </div>
+        <div class="flex justify-between gap-20 xl:gap-32">
+          {{ ContentLibraryItem.item("Stock Images", "12 million+ Stock Images",
+          "../assets/img/home/stock-images.jpg") }} {{
+          ContentLibraryItem.item("Stock Videos", "250k+ HD Videos",
+          "../assets/img/home/stock-videos.jpg") }} {{
+          ContentLibraryItem.item("Stock Vectors", "2.5+ million Vectors",
+          "../assets/img/home/stock-vectors.jpg") }}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto relative">
+        <h3
+          class="typography-h3 flex items-center text-center justify-center mb-16"
+        >
+          With
+          <img
+            src="../assets/img/logo/logo-text-only.svg"
+            class="mr-3 ml-2 -mb-1"
+          />
+          you can:
+        </h3>
+        <div class="flex gap-8">
+          {{ Feature.item("Cancel at any time", "Cancel your subscritpion
+          whenever you feel like it. <br />
+          No strings attached. ", "../assets/img/icons/feature-cancel.svg") }}
+          {{ Feature.item("Copyright Protection", "All your dowloads are
+          protected by our copyright protection guarantee.",
+          "../assets/img/icons/feature-copyright.svg") }} {{
+          Feature.item("Extended License", "With our Extended License you can:
+          Print-on-demand, advertising, a client's website, your own website,
+          books, web design templates, presentations, youtube, movies and more.
+          ", "../assets/img/icons/feature-contract.svg") }} {{
+          Feature.item("Flexibility", "Updgrade and dowgrade plans freely to fit
+          your needs.", "../assets/img/icons/feature-flexibility.svg") }}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto relative">
+        <h3 class="typography-h3 text-center mb-16">Words from our users:</h3>
+        <div class="flex gap-20">
+          {{ Review.item("Sandrita", "Sept. 12th 2021", "5", "It is a great
+          product. I recommend it to everyone. I bought it recently and the
+          images look great to me. I think it is an offer that is worth buying
+          because the offer is very generous.") }} {{ Review.item("WowRyan",
+          "Sept. 12th 2021", "5", "Love The Extended License. I create products
+          which are licensed template designs. I've usually been forced to
+          create most everything from scratch due to standard stock license
+          restrictions.") }} {{ Review.item("Esther", "Sept. 12th 2021", "5",
+          ".... We contacted their support for questions and they were very
+          responsive. We highly recommend them if you’re looking for affordable
+          images and videos for your projects.") }}
+        </div>
+      </div>
+    </section>
+
+    <section id="section-access" class="py-16">
+      <div class="container mx-auto relative text-center">
+        <div class="bg-[#E3F4FF] p-14 rounded-md">
+          <div class="flex flex-col gap-6 max-w-[700px] mx-auto">
+            <h3 class="typography-h3">
+              Gain exclusive access Million of assets
+            </h3>
+            <p class="text-xl">
+              Create an account and have an smooth creative flow by downloading
+              royalty-free images, videos and vectors for your projects
+            </p>
+            <div>{{ Button.btn("Join Now") }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>

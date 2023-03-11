@@ -1,0 +1,20 @@
+{% macro item(user, date, score, description) %}
+<div
+  class="w-1/3 rounded-lg bg-white p-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)]"
+>
+  <header class="flex items-center gap-4 mb-1">
+    <div class="font-medium">{{user}}</div>
+    <div class="w-1 h-1 rounded-lg bg-brand-body1"></div>
+    <div class="font-inter text-sm font-light">{{date}}</div>
+  </header>
+  <div class="flex items-center gap-2 mb-2">
+    <img src="../assets/img/icons/star.svg" />
+    <img src="../assets/img/icons/star.svg" />
+    <img src="../assets/img/icons/star.svg" />
+    <img src="../assets/img/icons/star.svg" />
+    <img src="../assets/img/icons/star.svg" />
+  </div>
+  <div class="mb-4"><img src="../assets/img/icons/quoteup.svg" /></div>
+  <p class="font-inter text-sm leading-loose">{{description}}</p>
+</div>
+{% endmacro %}

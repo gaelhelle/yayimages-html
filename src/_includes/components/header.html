@@ -51,7 +51,7 @@
     <div class="hidden lg:block">
       <nav class="flex gap-2 xl:gap-4 items-center">
         <a
-          href="#"
+          href="/images"
           class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
           >Images</a
         >
@@ -66,16 +66,19 @@
           >Vectors</a
         >
         <a
-          href="#"
+          href="/pricing"
           class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
           >Pricing</a
         >
+
+        {% if loggedin %} icon {% else %}
         <button
           type="button"
           class="toggle-menu-signup text-sm px-4 py-2.5 rounded-lg bg-brand-accent text-white cursor-pointer transition duration-300"
         >
           Sign Up
         </button>
+        {% endif %}
       </nav>
     </div>
     <div class="flex items-center gap-2 lg:hidden">
