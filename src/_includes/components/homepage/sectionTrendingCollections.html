@@ -2,7 +2,7 @@
 
 <section class="py-16">
   <div class="container mx-auto relative">
-    <header>
+    <div class="mb-6">
       <h3 class="typography-h3 flex items-center gap-4">
         Trending Collections
         <svg
@@ -18,15 +18,15 @@
           />
         </svg>
       </h3>
-      <p class="font-inter md:text-xl mt-4 mb-6">
+      <p class="font-inter md:text-xl mt-4">
         Check out the collections getting the most love
       </p>
-    </header>
+    </div>
   </div>
 
   <div class="scrolled-container">
     <div
-      class="scrolled-inner flex gap-6 overflow-scroll snap-mandatory snap-x px-16 scrollbar-hide flex-nowrap"
+      class="scrolled-inner flex gap-6 overflow-scroll snap-mandatory snap-x px-16 scrollbar-hide flex-nowrap py-2"
     >
       {{ Collection.item("Christmas",
       "../assets/img/collections/christmas.webp") }}{{ Collection.item("Dog",

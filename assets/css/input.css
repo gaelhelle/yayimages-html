@@ -43,7 +43,7 @@ body {
 }
 
 .typography-h2 {
-  @apply text-3xl font-bold capitalize;
+  @apply text-4xl font-bold capitalize;
 }
 
 .typography-h3 {
@@ -56,6 +56,10 @@ body {
 
 .typography-h5 {
   @apply text-xl font-medium capitalize;
+}
+
+.typography-subtitle-1 {
+  @apply font-inter text-xl;
 }
 
 .aside-filters {
@@ -110,9 +114,8 @@ input[type="radio"] {
   @apply accent-brand-accent w-4 h-4;
 }
 
-input,
-.font-inter {
-  font-family: "Inter", sans-serif;
+input {
+  @apply font-inter;
 }
 
 .accordion-item.open .accordion-arrow {

@@ -28,29 +28,35 @@ title: "YAYImages - HTML Template - Search Page"
 
             {{ Button.btn("Start Downloading", "/create-account") }}
           </div>
-          <div class="flex flex-col md:flex-row mditems-center mt-24 py-10">
-            <span class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0"
+          <div class="flex flex-col md:flex-row md:items-baseline mt-24 py-10">
+            <span
+              class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0 relative md:-top-[2px]"
               >Trusted by
             </span>
 
-            <ul class="flex items-center gap-4 flex-wrap justify-center">
+            <ul class="flex items-baseline gap-4 flex-wrap justify-center">
               <li>
-                <img src="../assets/img/trustedby/vimeo.png" alt="Vimeo" />
+                <img src="../assets/img/trustedby/vimeo.svg" alt="Vimeo" />
               </li>
               <li>
-                <img src="../assets/img/trustedby/appsumo.png" alt="Appsumo" />
+                <img
+                  src="../assets/img/trustedby/appsumo.svg"
+                  alt="Appsumo"
+                  class="h-[15px]"
+                />
               </li>
               <li>
-                <img src="../assets/img/trustedby/shotkit.png" alt="Shotkit" />
+                <img src="../assets/img/trustedby/shotkit.svg" alt="Shotkit" />
               </li>
               <li>
                 <img
                   src="../assets/img/trustedby/genially.png"
                   alt="Genially"
+                  class="-mb-[8px]"
                 />
               </li>
               <li>
-                <img src="../assets/img/trustedby/match.png" alt="Match" />
+                <img src="../assets/img/trustedby/match.svg" alt="Match" />
               </li>
             </ul>
           </div>

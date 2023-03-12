@@ -10,6 +10,9 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
       fontSize: {
         "3xl": "1.75rem",
         "2xs": "0.675rem",
@@ -34,6 +37,7 @@ module.exports = {
       boxShadow: {
         modal: "0 18px 30px 0 rgba(48, 69, 122, 0.31)",
         carousel: "0px 6px 15px 0px rgba(128, 141, 165, 0.5)",
+        "brand-sm": "0px 3px 5px 0px rgba(102, 102, 102, 0.2)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

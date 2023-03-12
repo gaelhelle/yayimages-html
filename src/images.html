@@ -3,6 +3,102 @@ layout: layouts/base.html
 title: "YAYImages - HTML Template - Images Page"
 ---
 
+{% import "components/homepage/collection.html" as Collection %}
+
 <main>
-  <div class="h-80 flex items-center justify-center">Images</div>
+  <section class="py-16">
+    <div class="container mx-auto">
+      <div class="mb-6">
+        <h1 class="typography-h2 mb-6">Explore Our Curated Collections</h1>
+        <p class="typography-subtitle-1 max-w-[600px]">
+          Browse our special hand-picked collections from our extensive catalog
+          of images
+        </p>
+      </div>
+    </div>
+    <div class="scrolled-container">
+      <div
+        class="scrolled-inner flex gap-6 overflow-scroll snap-mandatory snap-x px-16 scrollbar-hide flex-nowrap py-2"
+      >
+        {{ Collection.item("Christmas",
+        "../assets/img/collections/christmas.webp") }}{{ Collection.item("Dog",
+        "../assets/img/collections/dog.webp") }}{{ Collection.item("Nature",
+        "../assets/img/collections/nature.webp") }}{{
+        Collection.item("Wildlife", "../assets/img/collections/wildlife.webp")
+        }}{{ Collection.item("Winter Sports",
+        "../assets/img/collections/wintersports.webp") }}{{
+        Collection.item("Travel", "../assets/img/collections/travel.webp") }}
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="container mx-auto">
+      <h2 class="typography-h3 flex items-center gap-4">
+        Popular Search
+        <svg
+          width="27"
+          height="25"
+          viewBox="0 0 27 25"
+          fill="none"
+          stroke="currentColor"
+          class="text-brand-accent"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.6751 3.47249C12.0723 2.89292 12.9277 2.89292 13.3249 3.47249L15.5051 6.65375L16.1906 6.18395L15.5051 6.65375C15.8952 7.22294 16.4696 7.64025 17.1315 7.83536L20.8308 8.92585C21.5047 9.12452 21.769 9.93798 21.3406 10.4948L18.9888 13.5515C18.568 14.0983 18.3486 14.7736 18.3675 15.4633L18.4736 19.3186C18.4929 20.0209 17.8009 20.5237 17.1389 20.2883L13.5051 18.9961C12.855 18.7649 12.145 18.7649 11.4949 18.9961L7.8611 20.2883C7.19909 20.5237 6.50711 20.0209 6.52643 19.3186L6.63246 15.4633C6.65143 14.7736 6.43204 14.0983 6.01125 13.5515L3.65943 10.4948C3.23097 9.93798 3.49528 9.12452 4.16923 8.92585L7.86852 7.83536C8.5304 7.64025 9.10478 7.22294 9.49487 6.65375L11.6751 3.47249Z"
+            stroke-width="2"
+          />
+          <path
+            d="M18.4846 15.9417L23.1276 16.7736"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20.4994 11.9866L25.142 12.8209"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </h2>
+      <div class="flex flex-wrap gap-4 mt-4">
+        <div
+          class="text-brand-accent font-inter text-sm rounded-lg border-2 border-brand-accent px-3 py-2"
+        >
+          Christmas
+        </div>
+        <div
+          class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
+        >
+          Dog
+        </div>
+        <div
+          class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
+        >
+          Nature
+        </div>
+        <div
+          class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
+        >
+          Travel
+        </div>
+        <div
+          class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
+        >
+          Sports
+        </div>
+        <div
+          class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
+        >
+          Co-working Spaces
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-with-sidebar open flex">
+    {% include "searchpage-aside.html" %} {% include "searchpage-content.html"
+    %}
+  </div>
 </main>

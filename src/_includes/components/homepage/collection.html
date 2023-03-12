@@ -1,7 +1,7 @@
 {% macro item(title, url) %}
 <a
   href="/collection/{{title | slugify}}"
-  class="min-w-[350px] h-[235px] rounded-lg group relative block w-full overflow-hidden"
+  class="min-w-[350px] h-[235px] rounded-xl group relative block w-full overflow-hidden shadow-brand-sm"
 >
   <div class="flex items-center justify-center absolute w-full h-full z-10">
     <h6 class="text-white text-2xl font-semibold">{{title}}</h6>
