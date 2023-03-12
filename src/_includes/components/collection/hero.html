@@ -1,0 +1,18 @@
+{% macro item(title, description, url) %}
+<section
+  id="section-hero-collection"
+  style="background-image: url('{{url}}')"
+  class="py-20 relative"
+>
+  <div class="container mx-auto">
+    <div class="text-white relative z-10">
+      <h1 class="typography-h2">{{title}}</h1>
+      <p class="mt-6 text-xl">{{description}}</p>
+    </div>
+  </div>
+
+  <div
+    class="absolute top-0 left-0 w-full h-full bg-brand-body1/40 mix-blend-multiply"
+  ></div>
+</section>
+{% endmacro %}

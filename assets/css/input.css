@@ -5,6 +5,7 @@
 :root {
   --header-height: 72px;
   --sidebar-filter-offset-y: 0;
+  --container-width: 100%;
 }
 
 body {
@@ -33,8 +34,16 @@ body {
   scrollbar-width: none;
 }
 
+.scrolled-container .scrolled-inner {
+  padding-left: calc(50vw - (var(--container-width) / 2 - 2rem));
+}
+
 .typography-h1 {
   @apply text-5xl font-extrabold capitalize;
+}
+
+.typography-h2 {
+  @apply text-3xl font-bold capitalize;
 }
 
 .typography-h3 {
@@ -127,6 +136,10 @@ input,
   @apply h-[58px];
 }
 
+#section-hero-collection {
+  background: #d9d9d9 center center/cover;
+}
+
 @media only screen and (max-width: md) {
   .typography-h3 {
     @apply text-2xl;
@@ -141,12 +154,28 @@ input,
   :root {
     --header-height: 100px;
     --sidebar-filter-offset-y: 100px;
+    --container-width: 768px;
   }
 }
 
 @media screen(lg) {
   .page-with-sidebar.open .page-content {
     @apply pl-16;
+  }
+
+  :root {
+    --container-width: 1024px;
+  }
+}
+
+@media screen(xl) {
+  :root {
+    --container-width: 1280px;
+  }
+}
+@media screen(2xl) {
+  :root {
+    --container-width: 1536px;
   }
 }
 

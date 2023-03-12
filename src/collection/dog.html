@@ -1,0 +1,11 @@
+---
+layout: layouts/base.html
+title: "YAYImages - HTML Template - Collection Dog"
+---
+
+{% import "components/collection/hero.html" as Hero %}
+
+<main>
+  {{Hero.item("Dogs", "Dogs gog", "../../assets/img/collections/dog.webp")}} {%
+  include "components/collection/content.html" %}
+</main>
