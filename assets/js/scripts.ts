@@ -83,11 +83,21 @@ const windowResize = () => {
   resizeTimer = setTimeout(function () {
     subScribeAccordion();
 
-    // if (window.innerWidth < 768) {
-    //   subScribeAccordionMobile();
-    // } else {
-    //   subScribeAccordionMobile();
-    // }
+    const footer = document.querySelector("#page-footer");
+
+    if (window.innerWidth < 768) {
+      for (const accordionFooter of footer.querySelectorAll(
+        ".accordion-item"
+      )) {
+        accordionFooter.classList.remove("open");
+      }
+    } else {
+      for (const accordionFooter of footer.querySelectorAll(
+        ".accordion-item"
+      )) {
+        accordionFooter.classList.add("open");
+      }
+    }
   }, 200);
 };
 window.addEventListener("resize", windowResize);
