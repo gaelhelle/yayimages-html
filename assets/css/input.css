@@ -21,8 +21,16 @@ body {
 }
 
 .home {
-  background: url("../assets/img/bg-home.png") top center/cover;
+  background: url("../assets/img/bg-waves-1.png") top center/cover;
   background-position: left -210px;
+}
+
+.pricing {
+  background: url("../assets/img/bg-waves-2.jpg") top center/cover;
+}
+
+.explore {
+  background: url("../assets/img/bg-waves-3.jpg") top center/contain;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -35,7 +43,7 @@ body {
 }
 
 .scrolled-container .scrolled-inner {
-  padding-left: calc(50vw - (var(--container-width) / 2 - 2rem));
+  @apply px-8;
 }
 
 .typography-h1 {
@@ -60,6 +68,17 @@ body {
 
 .typography-subtitle-1 {
   @apply font-inter text-xl;
+}
+
+.typography-body-5 {
+  @apply font-inter text-sm text-brand-body1 font-light;
+}
+
+.text-gradient-1 {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A];
+}
+.text-gradient-2 {
+  /* @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A]; */
 }
 
 .aside-filters {
@@ -158,6 +177,10 @@ input {
     --header-height: 100px;
     --sidebar-filter-offset-y: 100px;
     --container-width: 768px;
+  }
+
+  .scrolled-container .scrolled-inner {
+    padding-left: calc(50vw - (var(--container-width) / 2 - 2rem));
   }
 }
 

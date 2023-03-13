@@ -1,0 +1,29 @@
+{% import "components/faq.html" as Faq %}
+
+<section class="py-16">
+  <div class="container mx-auto relative">
+    <h3 class="typography-h3 text-center mb-6 md:mb-12">FAQ</h3>
+  </div>
+  <div class="container mx-auto relative">
+    <div
+      class="border-2 border-black rounded-lg flex flex-col divide-y-2 divide-black"
+    >
+      {{ Faq.item("Can the images be used on a client’s website?", "All our
+      images are JPEGs. Our vector files are either EPS or SVG. In addition all
+      vector files are also available as JPEGs. Videos come in MP4 or MOV
+      format, you can see the original files codec listed in detail page.", 1)
+      }} {{ Faq.item("How many downloads are available per day?", "All our
+      images are JPEGs. Our vector files are either EPS or SVG. In addition all
+      vector files are also available as JPEGs. Videos come in MP4 or MOV
+      format, you can see the original files codec listed in detail page.", 2)
+      }} {{ Faq.item("What licences are included?", "All our images are JPEGs.
+      Our vector files are either EPS or SVG. In addition all vector files are
+      also available as JPEGs. Videos come in MP4 or MOV format, you can see the
+      original files codec listed in detail page.", 3) }} {{ Faq.item("What
+      media formats do you offer?", "All our images are JPEGs. Our vector files
+      are either EPS or SVG. In addition all vector files are also available as
+      JPEGs. Videos come in MP4 or MOV format, you can see the original files
+      codec listed in detail page.", 4) }}
+    </div>
+  </div>
+</section>

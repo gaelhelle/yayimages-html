@@ -1,0 +1,22 @@
+{% macro item(title, description, id) %}
+<div class="accordion-item">
+  <button
+    class="cursor-pointer px-6 md:px-8 py-5 md:py-7 w-full flex items-center justify-between text-xl md:text-2xl"
+    data-toggle="collapse"
+    data-target="#faq-{{id}}"
+  >
+    {{title}}
+    <img
+      src="/assets/img/icons/arrow-down-black.svg"
+      alt="Icon Arrow"
+      class="accordion-arrow"
+    />
+  </button>
+  <div
+    class="accordion-inner px-6 md:px-8 py-5 md:py-7 !pt-0 md:text-xl text-brand-body1 leading-loose md:leading-loose"
+    id="faq-{{id}}"
+  >
+    {{description}}
+  </div>
+</div>
+{% endmacro %}

@@ -4,138 +4,110 @@ title: "YAYImages - HTML Template - Search Page"
 ---
 
 {% import "components/button.html" as Button %} {% import
-"components/homepage/review.html" as Review %} {% import
 "components/homepage/feature.html" as Feature %}
 
-<main>
+<main class="home">
   {% include "components/homepage/salebanner.html" %}
 
-  <div class="home">
-    <div class="container mx-auto relative">
-      <div class="flex justify-between relative">
-        <div class="mt-32 lg:mt-48">
-          <div class="max-w-[500px]">
-            <h1 class="capitalize text-3xl lg:text-5xl font-bold leading-tight">
-              Stock Assets for your
-              <span class="text-brand-accent">creative</span> projects
-            </h1>
-            <p class="my-10 lg:text-xl">
-              <span class="text-brand-accent">13.5</span> Million Royalty-Free
-              Stock Photos, Vectors and Videos from
-              <span class="text-brand-accent">18,000</span> photographers from
-              <span class="text-brand-accent">145+</span> countries
-            </p>
+  <div class="container mx-auto relative">
+    <div class="flex justify-between relative">
+      <div class="mt-32 lg:mt-48">
+        <div class="max-w-[500px]">
+          <h1 class="capitalize text-3xl lg:text-5xl font-bold leading-tight">
+            Stock Assets for your
+            <span class="text-brand-accent">creative</span> projects
+          </h1>
+          <p class="my-10 lg:text-xl">
+            <span class="text-brand-accent">13.5</span> Million Royalty-Free
+            Stock Photos, Vectors and Videos from
+            <span class="text-brand-accent">18,000</span> photographers from
+            <span class="text-brand-accent">145+</span> countries
+          </p>
 
-            {{ Button.btn("Start Downloading", "/create-account") }}
-          </div>
-          <div class="flex flex-col md:flex-row md:items-baseline mt-24 py-10">
-            <span
-              class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0 relative md:-top-[2px]"
-              >Trusted by
-            </span>
-
-            <ul class="flex items-baseline gap-4 flex-wrap justify-center">
-              <li>
-                <img src="../assets/img/trustedby/vimeo.svg" alt="Vimeo" />
-              </li>
-              <li>
-                <img
-                  src="../assets/img/trustedby/appsumo.svg"
-                  alt="Appsumo"
-                  class="h-[15px]"
-                />
-              </li>
-              <li>
-                <img src="../assets/img/trustedby/shotkit.svg" alt="Shotkit" />
-              </li>
-              <li>
-                <img
-                  src="../assets/img/trustedby/genially.png"
-                  alt="Genially"
-                  class="-mb-[8px]"
-                />
-              </li>
-              <li>
-                <img src="../assets/img/trustedby/match.svg" alt="Match" />
-              </li>
-            </ul>
-          </div>
+          {{ Button.btn("Start Downloading", "/create-account") }}
         </div>
-        <div>{% include "components/homepage/heroCarousel.html" %}</div>
+        <div class="flex flex-col md:flex-row md:items-baseline mt-24 py-10">
+          <span
+            class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0 relative md:-top-[2px]"
+            >Trusted by
+          </span>
+
+          <ul class="flex items-baseline gap-4 flex-wrap justify-center">
+            <li>
+              <img src="../assets/img/trustedby/vimeo.svg" alt="Vimeo" />
+            </li>
+            <li>
+              <img
+                src="../assets/img/trustedby/appsumo.svg"
+                alt="Appsumo"
+                class="h-[15px]"
+              />
+            </li>
+            <li>
+              <img src="../assets/img/trustedby/shotkit.svg" alt="Shotkit" />
+            </li>
+            <li>
+              <img
+                src="../assets/img/trustedby/genially.png"
+                alt="Genially"
+                class="-mb-[8px]"
+              />
+            </li>
+            <li>
+              <img src="../assets/img/trustedby/match.svg" alt="Match" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>{% include "components/homepage/heroCarousel.html" %}</div>
+    </div>
+  </div>
+
+  {% include "components/homepage/sectionContent.html" %}
+
+  <section class="py-16">
+    <div class="container mx-auto relative">
+      <h3
+        class="typography-h3 flex flex-wrap items-center text-center justify-center mb-16"
+      >
+        With
+        <img
+          src="../assets/img/logo/logo-text-only.svg"
+          class="mr-3 ml-2 -mb-1"
+        />
+        you can:
+      </h3>
+      <div class="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {{ Feature.item("Cancel at any time", "Cancel your subscritpion whenever
+        you feel like it. <br />
+        No strings attached. ", "../assets/img/icons/feature-cancel.svg") }} {{
+        Feature.item("Copyright Protection", "All your dowloads are protected by
+        our copyright protection guarantee.",
+        "../assets/img/icons/feature-copyright.svg") }} {{
+        Feature.item("Extended License", "With our Extended License you can:
+        Print-on-demand, advertising, a client's website, your own website,
+        books, web design templates, presentations, youtube, movies and more. ",
+        "../assets/img/icons/feature-contract.svg") }} {{
+        Feature.item("Flexibility", "Updgrade and dowgrade plans freely to fit
+        your needs.", "../assets/img/icons/feature-flexibility.svg") }}
       </div>
     </div>
+  </section>
 
-    {% include "components/homepage/sectionContent.html" %}
+  {% include "components/section-review.html" %}
 
-    <section class="py-16">
-      <div class="container mx-auto relative">
-        <h3
-          class="typography-h3 flex flex-wrap items-center text-center justify-center mb-16"
-        >
-          With
-          <img
-            src="../assets/img/logo/logo-text-only.svg"
-            class="mr-3 ml-2 -mb-1"
-          />
-          you can:
-        </h3>
-        <div class="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {{ Feature.item("Cancel at any time", "Cancel your subscritpion
-          whenever you feel like it. <br />
-          No strings attached. ", "../assets/img/icons/feature-cancel.svg") }}
-          {{ Feature.item("Copyright Protection", "All your dowloads are
-          protected by our copyright protection guarantee.",
-          "../assets/img/icons/feature-copyright.svg") }} {{
-          Feature.item("Extended License", "With our Extended License you can:
-          Print-on-demand, advertising, a client's website, your own website,
-          books, web design templates, presentations, youtube, movies and more.
-          ", "../assets/img/icons/feature-contract.svg") }} {{
-          Feature.item("Flexibility", "Updgrade and dowgrade plans freely to fit
-          your needs.", "../assets/img/icons/feature-flexibility.svg") }}
+  <section id="section-access" class="py-16">
+    <div class="md:container mx-auto relative text-center">
+      <div class="bg-[#E3F4FF] p-14 rounded-md">
+        <div class="flex flex-col gap-6 max-w-[700px] mx-auto">
+          <h3 class="typography-h3">Gain exclusive access Million of assets</h3>
+          <p class="text-xl">
+            Create an account and have an smooth creative flow by downloading
+            royalty-free images, videos and vectors for your projects
+          </p>
+          <div>{{ Button.btn("Join Now", "/create-account") }}</div>
         </div>
       </div>
-    </section>
-
-    <section class="py-16">
-      <div class="container mx-auto relative">
-        <h3 class="typography-h3 text-center mb-6 md:mb-12">
-          Words from our users:
-        </h3>
-      </div>
-      <div class="md:container mx-auto relative">
-        <div
-          class="flex gap-10 xl:gap-20 overflow-scroll lg:overflow-visible snap-mandatory snap-x px-10 md:px-16 lg:px-0 l py-10 scrollbar-hide"
-        >
-          {{ Review.item("Sandrita", "Sept. 12th 2021", "5", "It is a great
-          product. I recommend it to everyone. I bought it recently and the
-          images look great to me. I think it is an offer that is worth buying
-          because the offer is very generous.") }} {{ Review.item("WowRyan",
-          "Sept. 12th 2021", "5", "Love The Extended License. I create products
-          which are licensed template designs. I've usually been forced to
-          create most everything from scratch due to standard stock license
-          restrictions.") }} {{ Review.item("Esther", "Sept. 12th 2021", "5",
-          ".... We contacted their support for questions and they were very
-          responsive. We highly recommend them if you’re looking for affordable
-          images and videos for your projects.") }}
-        </div>
-      </div>
-    </section>
-
-    <section id="section-access" class="py-16">
-      <div class="md:container mx-auto relative text-center">
-        <div class="bg-[#E3F4FF] p-14 rounded-md">
-          <div class="flex flex-col gap-6 max-w-[700px] mx-auto">
-            <h3 class="typography-h3">
-              Gain exclusive access Million of assets
-            </h3>
-            <p class="text-xl">
-              Create an account and have an smooth creative flow by downloading
-              royalty-free images, videos and vectors for your projects
-            </p>
-            <div>{{ Button.btn("Join Now", "/create-account") }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>
