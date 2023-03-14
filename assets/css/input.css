@@ -10,6 +10,7 @@
 
 body {
   font-family: "Jost", sans-serif;
+  @apply text-black;
 }
 
 .container-fluid {
@@ -22,7 +23,7 @@ body {
 
 .home {
   background: url("../assets/img/bg-waves-1.png") top center/cover;
-  background-position: left -210px;
+  background-position: top center;
 }
 
 .pricing {
@@ -31,6 +32,9 @@ body {
 
 .explore {
   background: url("../assets/img/bg-waves-3.jpg") top center/contain;
+}
+
+.images .page-with-sidebar.open {
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -93,7 +97,7 @@ body {
 }
 
 .page-with-sidebar:not(.open) .aside-filters {
-  @apply max-lg:hidden;
+  @apply max-lg:hidden -mr-[36px] bg-transparent;
 }
 .page-with-sidebar:not(.open) .aside-filters .sidebar-search-container {
   @apply hidden;
@@ -170,7 +174,7 @@ input {
 
 @media screen(md) {
   .home {
-    background-position: top center;
+    background-position: center -95px;
   }
 
   :root {

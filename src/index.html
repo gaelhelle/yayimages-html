@@ -9,66 +9,70 @@ title: "YAYImages - HTML Template - Search Page"
 <main class="home">
   {% include "components/homepage/salebanner.html" %}
 
-  <div class="container mx-auto relative">
-    <div class="flex justify-between relative">
-      <div class="mt-32 lg:mt-48">
-        <div class="max-w-[500px]">
-          <h1 class="capitalize text-3xl lg:text-5xl font-bold leading-tight">
-            Stock Assets for your
-            <span class="text-brand-accent">creative</span> projects
-          </h1>
-          <p class="my-10 lg:text-xl">
-            <span class="text-brand-accent">13.5</span> Million Royalty-Free
-            Stock Photos, Vectors and Videos from
-            <span class="text-brand-accent">18,000</span> photographers from
-            <span class="text-brand-accent">145+</span> countries
-          </p>
+  <section class="pb-12">
+    <div class="container mx-auto relative">
+      <div class="flex justify-between relative">
+        <div class="mt-24 lg:mt-40">
+          <div class="max-w-[500px]">
+            <h1
+              class="capitalize text-3xl lg:text-5xl font-bold leading-tight lg:leading-tight"
+            >
+              Stock Assets for your
+              <span class="text-brand-accent">creative</span> projects
+            </h1>
+            <p class="my-10 lg:text-xl">
+              <span class="text-brand-accent">13.5</span> Million Royalty-Free
+              Stock Photos, Vectors and Videos from
+              <span class="text-brand-accent">18,000</span> photographers from
+              <span class="text-brand-accent">145+</span> countries
+            </p>
 
-          {{ Button.btn("Start Downloading", "/create-account") }}
-        </div>
-        <div class="flex flex-col md:flex-row md:items-baseline mt-24 py-10">
-          <span
-            class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0 relative md:-top-[2px]"
-            >Trusted by
-          </span>
+            {{ Button.btn("Start Downloading", "/create-account") }}
+          </div>
+          <div class="flex flex-col md:flex-row md:items-baseline mt-32">
+            <span
+              class="text-brand-body1 font-inter text-sm mr-4 mb-3 md:mb-0 relative md:-top-[2px]"
+              >Trusted by
+            </span>
 
-          <ul class="flex items-baseline gap-4 flex-wrap justify-center">
-            <li>
-              <img src="../assets/img/trustedby/vimeo.svg" alt="Vimeo" />
-            </li>
-            <li>
-              <img
-                src="../assets/img/trustedby/appsumo.svg"
-                alt="Appsumo"
-                class="h-[15px]"
-              />
-            </li>
-            <li>
-              <img src="../assets/img/trustedby/shotkit.svg" alt="Shotkit" />
-            </li>
-            <li>
-              <img
-                src="../assets/img/trustedby/genially.png"
-                alt="Genially"
-                class="-mb-[8px]"
-              />
-            </li>
-            <li>
-              <img src="../assets/img/trustedby/match.svg" alt="Match" />
-            </li>
-          </ul>
+            <ul class="flex items-baseline gap-4 flex-wrap justify-center">
+              <li>
+                <img src="../assets/img/trustedby/vimeo.svg" alt="Vimeo" />
+              </li>
+              <li>
+                <img
+                  src="../assets/img/trustedby/appsumo.svg"
+                  alt="Appsumo"
+                  class="h-[15px]"
+                />
+              </li>
+              <li>
+                <img src="../assets/img/trustedby/shotkit.svg" alt="Shotkit" />
+              </li>
+              <li>
+                <img
+                  src="../assets/img/trustedby/genially.png"
+                  alt="Genially"
+                  class="-mb-[8px]"
+                />
+              </li>
+              <li>
+                <img src="../assets/img/trustedby/match.svg" alt="Match" />
+              </li>
+            </ul>
+          </div>
         </div>
+        <div>{% include "components/homepage/heroCarousel.html" %}</div>
       </div>
-      <div>{% include "components/homepage/heroCarousel.html" %}</div>
     </div>
-  </div>
+  </section>
 
   {% include "components/homepage/sectionContent.html" %}
 
-  <section class="py-16">
+  <section class="py-6">
     <div class="container mx-auto relative">
       <h3
-        class="typography-h3 flex flex-wrap items-center text-center justify-center mb-16"
+        class="typography-h3 flex flex-wrap items-center text-center justify-center mb-12"
       >
         With
         <img

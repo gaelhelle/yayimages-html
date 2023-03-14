@@ -1,12 +1,13 @@
 ---
 layout: layouts/base.html
 title: "YAYImages - HTML Template - Images Page"
+activeMenu: "images"
 ---
 
 {% import "components/homepage/collection.html" as Collection %}
 
-<main class="images explore">
-  <section class="py-16">
+<main class="images explore flex flex-col gap-18">
+  <section class="pt-20">
     <div class="container mx-auto">
       <div class="mb-10">
         <h1 class="typography-h2 mb-10">Explore Our Curated Collections</h1>
@@ -31,7 +32,7 @@ title: "YAYImages - HTML Template - Images Page"
       </div>
     </div>
   </section>
-  <section class="py-16">
+  <section class="-mb-12">
     <div class="container mx-auto">
       <h2 class="typography-h3 flex items-center gap-4">
         Popular Search
@@ -62,7 +63,7 @@ title: "YAYImages - HTML Template - Images Page"
           />
         </svg>
       </h2>
-      <div class="flex flex-wrap gap-4 mt-4">
+      <div class="flex flex-wrap gap-4 mt-10">
         <div
           class="text-brand-accent font-inter text-sm rounded-lg border-2 border-brand-accent px-3 py-2"
         >

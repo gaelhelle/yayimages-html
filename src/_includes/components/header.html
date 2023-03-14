@@ -18,22 +18,22 @@
       <nav class="flex gap-2 xl:gap-4 items-center">
         <a
           href="/images"
-          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
+          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300 {{ 'bg-brand-xl-lightgray text-brand-accent ' if activeMenu === 'images'}}"
           >Images</a
         >
         <a
           href="/video-footage"
-          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
+          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300 {{ 'bg-brand-xl-lightgray text-brand-accent ' if activeMenu === 'video-footage'}}"
           >Videos</a
         >
         <a
           href="/vector-illustrations"
-          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
+          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300 {{ 'bg-brand-xl-lightgray text-brand-accent ' if activeMenu === 'vector-illustrations'}}"
           >Vectors</a
         >
         <a
           href="/pricing"
-          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300"
+          class="text-sm px-3 py-2 rounded-md hover:bg-brand-xl-lightgray hover:text-brand-accent cursor-pointer transition duration-300 {{ 'bg-brand-xl-lightgray text-brand-accent ' if activeMenu === 'pricing'}}"
           >Pricing</a
         >
 
