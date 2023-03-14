@@ -214,33 +214,35 @@ const handleInputRadioChange = (event) => {
 
   if (radioName === "subscription") {
     const stepper = document.querySelector(".plan-stepper");
-    if (!stepper) return;
-    stepper.querySelector('[data-step="0"]').classList.add("hidden");
-    stepper.querySelector('[data-step="1"]').classList.remove("hidden");
+    if (stepper) {
+      stepper.querySelector('[data-step="0"]').classList.add("hidden");
+      stepper.querySelector('[data-step="1"]').classList.remove("hidden");
+    }
   }
 
   const radioGroupItems = document.querySelectorAll(
     `input[type='radio'][name='${radioName}']`
   );
 
-  if (!radioGroupItems) return;
+  if (radioGroupItems) {
+    for (const radioGroupItem of radioGroupItems) {
+      const parent = radioGroupItem.parentElement.querySelector("label");
+      if (parent) {
+        parent.classList.remove("active");
 
-  for (const radioGroupItem of radioGroupItems) {
-    const parent = radioGroupItem.parentElement.querySelector("label");
-    if (!parent) return;
-    parent.classList.remove("active");
-
-    const children = parent.querySelectorAll("label");
-    if (children) {
-      for (const child of children) {
-        child.classList.remove("active");
+        const children = parent.querySelectorAll("label");
+        if (children) {
+          for (const child of children) {
+            child.classList.remove("active");
+          }
+        }
       }
     }
   }
 
   if (checked) {
     const label = document.querySelector(`label[for="${radioId}"]`);
-
+    console.log(label);
     if (!label) return;
     label.classList.add("active");
 
@@ -263,21 +265,27 @@ const handleInputRadioChange = (event) => {
 
 const initInputMask = () => {
   const inputCC = document.getElementById("input-cc-number");
-  const cc_number = IMask(inputCC, { mask: "0000 0000 0000 0000" });
+  if (inputCC) {
+    const cc_number = IMask(inputCC, { mask: "0000 0000 0000 0000" });
+  }
 
   const inputExpiration = document.getElementById("input-cc-expiration");
-  const cc_expiration = IMask(inputExpiration, {
-    mask: "MM{/}YY",
-    groups: {
-      YY: new IMask.MaskedPattern.Group.Range([0, 99]),
-      MM: new IMask.MaskedPattern.Group.Range([1, 12]),
-    },
-  });
+  if (inputExpiration) {
+    const cc_expiration = IMask(inputExpiration, {
+      mask: "MM{/}YY",
+      groups: {
+        YY: new IMask.MaskedPattern.Group.Range([0, 99]),
+        MM: new IMask.MaskedPattern.Group.Range([1, 12]),
+      },
+    });
+  }
 
   const inputCVC = document.getElementById("input-cc-cvc");
-  var securitycode_mask = new IMask(inputCVC, {
-    mask: "0000",
-  });
+  if (inputCVC) {
+    var securitycode_mask = new IMask(inputCVC, {
+      mask: "0000",
+    });
+  }
 };
 
 const inputRadios = document.querySelectorAll("input[type='radio']");
