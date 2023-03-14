@@ -212,18 +212,72 @@ const handleInputRadioChange = (event) => {
   const radioName = event.currentTarget.name;
   const checked = event.currentTarget.checked;
 
+  if (radioName === "subscription") {
+    const stepper = document.querySelector(".plan-stepper");
+    if (!stepper) return;
+    stepper.querySelector('[data-step="0"]').classList.add("hidden");
+    stepper.querySelector('[data-step="1"]').classList.remove("hidden");
+  }
+
   const radioGroupItems = document.querySelectorAll(
     `input[type='radio'][name='${radioName}']`
   );
 
+  if (!radioGroupItems) return;
+
   for (const radioGroupItem of radioGroupItems) {
-    radioGroupItem.parentElement
-      .querySelector("label")
-      .classList.remove("active");
+    const parent = radioGroupItem.parentElement.querySelector("label");
+    if (!parent) return;
+    parent.classList.remove("active");
+
+    const children = parent.querySelectorAll("label");
+    if (children) {
+      for (const child of children) {
+        child.classList.remove("active");
+      }
+    }
   }
+
   if (checked) {
-    document.querySelector(`label[for="${radioId}"]`).classList.add("active");
+    const label = document.querySelector(`label[for="${radioId}"]`);
+
+    if (!label) return;
+    label.classList.add("active");
+
+    /*
+    const grandParent = label.parentNode.closest("label");
+    if (!grandParent) return;
+
+    const grandParentName = grandParent.htmlFor;
+    console.log(grandParentName);
+
+    const grandParentRadio = document.querySelector(
+      `input[type="radio"][value="${grandParentName}"]`
+    );
+    console.log(grandParentName);
+    grandParentRadio.checked = true;
+    // grandParentRadio.dispatchEvent(new Event("change"));
+    */
   }
+};
+
+const initInputMask = () => {
+  const inputCC = document.getElementById("input-cc-number");
+  const cc_number = IMask(inputCC, { mask: "0000 0000 0000 0000" });
+
+  const inputExpiration = document.getElementById("input-cc-expiration");
+  const cc_expiration = IMask(inputExpiration, {
+    mask: "MM{/}YY",
+    groups: {
+      YY: new IMask.MaskedPattern.Group.Range([0, 99]),
+      MM: new IMask.MaskedPattern.Group.Range([1, 12]),
+    },
+  });
+
+  const inputCVC = document.getElementById("input-cc-cvc");
+  var securitycode_mask = new IMask(inputCVC, {
+    mask: "0000",
+  });
 };
 
 const inputRadios = document.querySelectorAll("input[type='radio']");
@@ -234,6 +288,7 @@ for (const inputRadio of inputRadios) {
 const init = () => {
   loadMobile();
   windowResize();
+  initInputMask();
 };
 
 init();

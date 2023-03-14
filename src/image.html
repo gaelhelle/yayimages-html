@@ -147,7 +147,7 @@ title: "YAYImages - HTML Template - Image Page"
                   <div class="flex gap-10 items-end">
                     <h3 class="typography-h5 text-xl">Unlimited Plan 🚀</h3>
                     <div
-                      class="text-brand-body1 relative group-hover:-translate-x-3 transition duration-500 hidden md:block"
+                      class="text-brand-body1 group-hover:-translate-x-3 transition duration-500 hidden md:block"
                     >
                       Starting from $8.25/month
                     </div>
@@ -155,9 +155,7 @@ title: "YAYImages - HTML Template - Image Page"
                   <p class="[&>span]:text-brand-accent text-lg mb-2">
                     <span>Unlimited downloads</span> on all of our files.
                   </p>
-                  <div
-                    class="text-brand-body1 relative group-hover:-translate-x-3 transition duration-500 block md:hidden"
-                  >
+                  <div class="text-brand-body1 block md:hidden">
                     Starting from $8.25/month
                   </div>
                   <ul class="[&>li]:mb-2 hidden md:block">
@@ -208,7 +206,9 @@ title: "YAYImages - HTML Template - Image Page"
                     <h3 class="typography-h5 text-xl">
                       Lifetime Membership 🔥
                     </h3>
-                    <div class="hidden md:flex gap-4 items-end">
+                    <div
+                      class="hidden md:flex gap-4 items-end group-hover:-translate-x-3 transition duration-500"
+                    >
                       <div class="text-brand-body1 line-through">$199</div>
                       <div class="text-2xl text-gradient-1">$149</div>
                     </div>
@@ -286,7 +286,9 @@ title: "YAYImages - HTML Template - Image Page"
             </a>
             <div class="text-brand-body1 text-sm mt-6">
               Already have an account?
-              <a href="#" class="text-brand-accent font-semibold">Login</a>
+              <a href="#" class="text-brand-accent font-semibold underline"
+                >Login</a
+              >
             </div>
           </div>
         </div>
@@ -298,9 +300,9 @@ title: "YAYImages - HTML Template - Image Page"
     <div class="container mx-auto">
       <h3 class="typography-h5">Keywords</h3>
     </div>
-    <div class="scrolled-container">
+    <div class="scrolled-container py-8">
       <div
-        class="scrolled-inner flex gap-6 overflow-scroll snap-mandatory md:snap-none snap-x px-0 md:px-16 scrollbar-hide flex-nowrap py-2"
+        class="scrolled-inner flex gap-6 overflow-scroll snap-mandatory md:snap-none snap-x px-0 md:px-16 scrollbar-hide flex-nowrap"
       >
         <div
           class="text-brand-body1 font-inter text-sm rounded-lg border border-brand-body1 px-3 py-2"
@@ -348,23 +350,22 @@ title: "YAYImages - HTML Template - Image Page"
           Nature
         </div>
       </div>
-
-      <div class="flex justify-center">
-        <button class="flex items-center gap-2">
-          <svg
-            width="15"
-            height="8"
-            viewBox="0 0 15 8"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.47253 7.65783C7.22967 7.65831 6.99431 7.57372 6.8073 7.41877L0.570804 2.22168C0.358538 2.04526 0.225051 1.79173 0.199711 1.51688C0.17437 1.24203 0.259251 0.968373 0.43568 0.756106C0.612109 0.54384 0.865634 0.410354 1.14048 0.385014C1.41533 0.359673 1.68899 0.444553 1.90126 0.620982L7.47253 5.27757L13.0438 0.78729C13.1501 0.700949 13.2725 0.636473 13.4038 0.597565C13.5351 0.558658 13.6728 0.546088 13.809 0.560576C13.9452 0.575065 14.0772 0.616327 14.1974 0.68199C14.3176 0.747654 14.4236 0.836426 14.5094 0.943202C14.6046 1.05008 14.6767 1.17546 14.7211 1.31149C14.7656 1.44752 14.7815 1.59127 14.7679 1.73374C14.7542 1.87621 14.7113 2.01431 14.6417 2.13942C14.5722 2.26452 14.4776 2.37391 14.3639 2.46075L8.12736 7.48113C7.93498 7.61159 7.70442 7.67381 7.47253 7.65783Z"
-            />
-          </svg>
-          <span>View all tags</span>
-        </button>
-      </div>
+    </div>
+    <div class="flex justify-center">
+      <button class="flex items-center gap-2">
+        <svg
+          width="15"
+          height="8"
+          viewBox="0 0 15 8"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.47253 7.65783C7.22967 7.65831 6.99431 7.57372 6.8073 7.41877L0.570804 2.22168C0.358538 2.04526 0.225051 1.79173 0.199711 1.51688C0.17437 1.24203 0.259251 0.968373 0.43568 0.756106C0.612109 0.54384 0.865634 0.410354 1.14048 0.385014C1.41533 0.359673 1.68899 0.444553 1.90126 0.620982L7.47253 5.27757L13.0438 0.78729C13.1501 0.700949 13.2725 0.636473 13.4038 0.597565C13.5351 0.558658 13.6728 0.546088 13.809 0.560576C13.9452 0.575065 14.0772 0.616327 14.1974 0.68199C14.3176 0.747654 14.4236 0.836426 14.5094 0.943202C14.6046 1.05008 14.6767 1.17546 14.7211 1.31149C14.7656 1.44752 14.7815 1.59127 14.7679 1.73374C14.7542 1.87621 14.7113 2.01431 14.6417 2.13942C14.5722 2.26452 14.4776 2.37391 14.3639 2.46075L8.12736 7.48113C7.93498 7.61159 7.70442 7.67381 7.47253 7.65783Z"
+          />
+        </svg>
+        <span>View all tags</span>
+      </button>
     </div>
   </section>
 

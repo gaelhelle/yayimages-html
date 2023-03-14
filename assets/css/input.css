@@ -34,6 +34,10 @@ body {
   background: url("../assets/img/bg-waves-3.jpg") top center/contain;
 }
 
+.create-an-account {
+  background: url("../assets/img/bg-waves-4.jpg") top center/cover;
+}
+
 .images .page-with-sidebar.open {
 }
 
@@ -89,6 +93,7 @@ body {
   /* @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A]; */
 }
 
+label.active label .radio-indicator,
 .radio-indicator {
   appearance: none;
   -webkit-appearance: none;
@@ -98,9 +103,15 @@ body {
   box-shadow: 0 0 0 2px #666666;
 }
 
+label.active label.active .radio-indicator,
 label.active .radio-indicator {
   background: #3a4df1;
   box-shadow: 0 0 0 2px #3a4df1;
+}
+
+.receipt .receipt-bottom {
+  background: url("../assets/img/bg-receipt.png") bottom center repeat-x;
+  @apply h-[24px];
 }
 
 .aside-filters {

@@ -1,0 +1,540 @@
+---
+layout: layouts/base.html
+title: "YAYImages - HTML Template - Create an Account Page"
+---
+
+<main class="create-an-account pb-32 flex flex-col gap-18">
+  <section class="pt-20">
+    <div class="container mx-auto">
+      <div class="md:mb-10">
+        <h1 class="typography-h2 mb-10">Create an account</h1>
+        <p class="typography-subtitle-1 max-w-[600px]">
+          Buy a subscription and gain access to our ever growing collection of
+          high-quality stock assets.
+        </p>
+      </div>
+      <div class="hidden md:block">
+        <ol
+          class="plan-stepper flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base max-w-[770px] mx-auto"
+        >
+          <li
+            data-step="0"
+            class="relative flex md:w-full items-center text-brand-accent sm:after:content-[''] after:w-full after:h-0.5 after:bg-[#D7D7D7] after:hidden sm:after:inline-block"
+          >
+            <div class="relative">
+              <div
+                class="w-10 h-10 rounded-full bg-[#D7D7D7] text-brand-body1 flex items-center justify-center"
+              >
+                <span class="typography-subtitle-1">1</span>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2">
+                <div class="typography-body-5 whitespace-nowrap">
+                  Choose a Plan
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            data-step="1"
+            class="hidden relative flex md:w-full items-center text-brand-accent sm:after:content-[''] after:w-full after:h-0.5 after:bg-[#D7D7D7] after:hidden sm:after:inline-block"
+          >
+            <div class="relative">
+              <div
+                class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center"
+              >
+                <svg
+                  width="21"
+                  height="16"
+                  viewBox="0 0 21 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 8.46154L8.46154 14L18.6154 2"
+                    stroke="white"
+                    stroke-width="3.69231"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2">
+                <div class="typography-body-5 whitespace-nowrap">
+                  Choose a Plan
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-step="2" class="flex items-center">
+            <div class="relative">
+              <div
+                class="w-10 h-10 rounded-full bg-[#D7D7D7] text-brand-body1 flex items-center justify-center"
+              >
+                <span class="typography-subtitle-1">2</span>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2">
+                <div class="typography-body-5 whitespace-nowrap">
+                  Fill in details
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container mx-auto relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div>
+          <ul class="block-select flex flex-col gap-8">
+            <li class="relative">
+              <input
+                type="radio"
+                id="unlimited"
+                name="subscription"
+                value="unlimited"
+                class="hidden peer"
+              />
+              <label class="p-8 block cursor-pointer group" for="unlimited">
+                <div class="flex gap-3">
+                  <div class="">
+                    <input type="radio" class="radio-indicator mt-1" />
+                  </div>
+                  <div>
+                    <div class="flex gap-10 items-end">
+                      <h3 class="typography-h5 text-xl">Unlimited Plan 🚀</h3>
+                      <div
+                        class="text-brand-body1 group-hover:-translate-x-3 transition duration-500 hidden md:block"
+                      >
+                        Starting from $8.25/month
+                      </div>
+                    </div>
+                    <p class="[&>span]:text-brand-accent text-lg mb-2">
+                      <span>Unlimited downloads</span> on all of our files.
+                    </p>
+                    <div class="text-brand-body1 block md:hidden">
+                      Starting from $8.25/month
+                    </div>
+                    <ul class="[&>li]:mb-2 hidden md:block">
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />
+                        Extended License
+                      </li>
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img
+                          src="../assets/img/icons/list-checkmark.svg"
+                        />Cancel at anytime. No strings attached.
+                      </li>
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />
+                        Upgrade or downgrade your membership freely.
+                      </li>
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />
+                        $25,000 Copyright protection guarantee of your
+                        downloads.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="rounded-xl border divide-y mt-4">
+                  <li>
+                    <input
+                      type="radio"
+                      id="unlimited-monthly"
+                      name="unlimited-plan-subscription-type"
+                      value="unlimited-monthly"
+                      class="hidden peer"
+                    />
+                    <label
+                      class="px-8 py-5 block cursor-pointer"
+                      for="unlimited-monthly"
+                    >
+                      <div class="text-sm flex items-center gap-5">
+                        <div>
+                          <input type="radio" class="radio-indicator" />
+                        </div>
+                        <div>
+                          <div>Monthly</div>
+                          <div class="font-medium">
+                            <span class="font-medium mr-2">$11.99</span>
+                            <span class="font-light text-brand-body1"
+                              >Billed every month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="unlimited-quaterly"
+                      name="unlimited-plan-subscription-type"
+                      value="unlimited-quaterly"
+                      class="hidden peer"
+                    />
+                    <label
+                      class="px-8 py-5 block cursor-pointer"
+                      for="unlimited-quaterly"
+                    >
+                      <div class="text-sm flex items-center gap-5">
+                        <div>
+                          <input type="radio" class="radio-indicator" />
+                        </div>
+                        <div>
+                          <div>Monthly</div>
+                          <div class="font-medium">
+                            <span class="font-medium mr-2">$11.99</span>
+                            <span class="font-light text-brand-body1"
+                              >Billed every month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="unlimited-yearly"
+                      name="unlimited-plan-subscription-type"
+                      value="unlimited-yearly"
+                      class="hidden peer"
+                    />
+                    <label
+                      class="px-8 py-5 block cursor-pointer"
+                      for="unlimited-yearly"
+                    >
+                      <div class="text-sm flex items-center gap-5">
+                        <div>
+                          <input type="radio" class="radio-indicator" />
+                        </div>
+                        <div>
+                          <div>Monthly</div>
+                          <div class="font-medium">
+                            <span class="font-medium mr-2">$11.99</span>
+                            <span class="font-light text-brand-body1"
+                              >Billed every month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </label>
+              <div
+                class="-z-10 pointer-events-none top-0 left-0 absolute w-full h-full rounded-xl shadow-carousel"
+              ></div>
+              <div
+                class="-z-10 pointer-events-none top-0 left-0 absolute w-full h-full rounded-xl opacity-0 peer-checked:opacity-100 bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A] p-0.5 transition duration-500"
+              >
+                <div class="bg-white h-full w-full rounded-[10px]"></div>
+              </div>
+            </li>
+            <li class="relative">
+              <input
+                type="radio"
+                id="lifetime"
+                name="subscription"
+                value="lifetime"
+                class="hidden peer"
+              />
+              <label class="p-8 block cursor-pointer group" for="lifetime">
+                <div class="flex gap-3">
+                  <div class="">
+                    <input type="radio" class="radio-indicator mt-1" />
+                  </div>
+                  <div>
+                    <div class="flex gap-10 items-end">
+                      <h3 class="typography-h5 text-xl">
+                        Lifetime Membership 🔥
+                      </h3>
+                      <div
+                        class="hidden md:flex gap-4 items-end group-hover:-translate-x-3 transition duration-500 h-0"
+                      >
+                        <div class="text-brand-body1 line-through">$199</div>
+                        <div class="text-2xl text-gradient-1">$149</div>
+                      </div>
+                    </div>
+                    <p class="[&>span]:text-brand-accent text-lg mb-2">
+                      Pay <span>once</span> — enjoy creative access
+                      <span>forever</span>
+                    </p>
+                    <div class="flex md:hidden gap-4 items-end">
+                      <div class="text-brand-body1 line-through">$199</div>
+                      <div class="text-2xl text-gradient-1">$149</div>
+                    </div>
+                    <ul class="[&>li]:mb-2 hidden md:block">
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />
+                        10 downloads per day
+                      </li>
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />Over
+                        14.5M of premium assets. Including: 200k+ HD videos, 12
+                        million images, and 2.5 million vectors
+                      </li>
+                      <li
+                        class="flex font-inter gap-4 items-center text-sm text-brand-body1"
+                      >
+                        <img src="../assets/img/icons/list-checkmark.svg" />
+                        $25,000 Copyright protection guarantee of your
+                        downloads.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="rounded-xl border divide-y mt-4">
+                  <li>
+                    <input
+                      type="radio"
+                      id="unlimited-monthly"
+                      name="unlimited-plan-subscription-type"
+                      value="unlimited-monthly"
+                      class="hidden peer"
+                    />
+                    <label
+                      class="px-8 py-5 block cursor-pointer"
+                      for="unlimited-monthly"
+                    >
+                      <div class="text-sm flex items-center gap-5">
+                        <div>
+                          <input type="radio" class="radio-indicator" />
+                        </div>
+                        <div>
+                          <div>One time purchase</div>
+                          <div class="font-medium">
+                            <span class="font-medium mr-2">$149</span>
+                            <span class="font-light text-brand-body1"
+                              >Lifetime</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </label>
+              <div
+                class="-z-10 pointer-events-none top-0 left-0 absolute w-full h-full rounded-xl shadow-carousel"
+              ></div>
+              <div
+                class="-z-10 pointer-events-none top-0 left-0 absolute w-full h-full rounded-xl opacity-0 peer-checked:opacity-100 bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A] p-0.5 transition duration-500"
+              >
+                <div class="bg-white h-full w-full rounded-[10px]"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="rounded-xl border-2 border-[#D7D7D7] p-8">
+            <form>
+              <div class="mb-10">
+                <h3 class="typography-h5 text-xl mb-6">Sign up</h3>
+                <div
+                  class="text-left flex flex-col md:grid md:grid-cols-2 gap-3"
+                >
+                  <input
+                    placeholder="First name *"
+                    class="rounded-lg border px-5 py-3"
+                  />
+                  <input
+                    placeholder="Last name*"
+                    class="rounded-lg border px-5 py-3"
+                  />
+                  <input
+                    placeholder="Email address *"
+                    class="col-span-2 rounded-lg border px-5 py-3"
+                  />
+                  <input
+                    placeholder="Create password *"
+                    type="password"
+                    class="col-span-2 rounded-lg border px-5 py-3"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 class="typography-h5 text-xl mb-6 flex items-center gap-4">
+                  Payment
+                  <svg
+                    width="17"
+                    height="21"
+                    viewBox="0 0 17 21"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.9146 6.49999H12.9146V4.60999C12.9146 3.54912 12.4931 2.5317 11.743 1.78156C10.9928 1.03141 9.97542 0.609985 8.91455 0.609985C7.85368 0.609985 6.83627 1.03141 6.08612 1.78156C5.33598 2.5317 4.91455 3.54912 4.91455 4.60999V6.49999H3.91455C3.1189 6.49999 2.35584 6.81606 1.79323 7.37866C1.23062 7.94127 0.914551 8.70434 0.914551 9.49999V17.5C0.914551 18.2956 1.23062 19.0587 1.79323 19.6213C2.35584 20.1839 3.1189 20.5 3.91455 20.5H13.9146C14.7102 20.5 15.4733 20.1839 16.0359 19.6213C16.5985 19.0587 16.9146 18.2956 16.9146 17.5V9.49999C16.9146 8.70434 16.5985 7.94127 16.0359 7.37866C15.4733 6.81606 14.7102 6.49999 13.9146 6.49999ZM6.91455 4.60999C6.9011 4.06528 7.104 3.53743 7.47883 3.14198C7.85367 2.74653 8.36991 2.51569 8.91455 2.49999C9.45919 2.51569 9.97543 2.74653 10.3503 3.14198C10.7251 3.53743 10.928 4.06528 10.9146 4.60999V6.49999H6.91455V4.60999ZM14.9146 17.5C14.9146 17.7652 14.8092 18.0196 14.6217 18.2071C14.4341 18.3946 14.1798 18.5 13.9146 18.5H3.91455C3.64933 18.5 3.39498 18.3946 3.20744 18.2071C3.01991 18.0196 2.91455 17.7652 2.91455 17.5V9.49999C2.91455 9.23477 3.01991 8.98042 3.20744 8.79288C3.39498 8.60534 3.64933 8.49999 3.91455 8.49999H13.9146C14.1798 8.49999 14.4341 8.60534 14.6217 8.79288C14.8092 8.98042 14.9146 9.23477 14.9146 9.49999V17.5Z"
+                    />
+                    <path
+                      d="M8.91455 10.5C8.32121 10.5 7.74119 10.6759 7.24784 11.0056C6.75449 11.3352 6.36998 11.8038 6.14291 12.3519C5.91585 12.9001 5.85644 13.5033 5.9722 14.0853C6.08795 14.6672 6.37367 15.2018 6.79323 15.6213C7.21279 16.0409 7.74734 16.3266 8.32928 16.4424C8.91122 16.5581 9.51442 16.4987 10.0626 16.2716C10.6108 16.0446 11.0793 15.6601 11.409 15.1667C11.7386 14.6734 11.9146 14.0933 11.9146 13.5C11.9146 12.7044 11.5985 11.9413 11.0359 11.3787C10.4733 10.8161 9.7102 10.5 8.91455 10.5ZM8.91455 14.5C8.71677 14.5 8.52343 14.4414 8.35898 14.3315C8.19453 14.2216 8.06636 14.0654 7.99067 13.8827C7.91499 13.7 7.89518 13.4989 7.93377 13.3049C7.97235 13.1109 8.06759 12.9327 8.20745 12.7929C8.3473 12.653 8.52548 12.5578 8.71946 12.5192C8.91344 12.4806 9.11451 12.5004 9.29724 12.5761C9.47996 12.6518 9.63614 12.78 9.74602 12.9444C9.8559 13.1089 9.91455 13.3022 9.91455 13.5C9.91455 13.7652 9.8092 14.0196 9.62166 14.2071C9.43412 14.3946 9.17977 14.5 8.91455 14.5Z"
+                    />
+                  </svg>
+                </h3>
+                <div
+                  class="text-left flex flex-col md:grid md:grid-cols-4 gap-3"
+                >
+                  <div class="col-span-2">
+                    <label class="block text-sm mb-2">Card Number</label>
+                    <div class="relative">
+                      <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="absolute top-1/2 -translate-y-1/2 left-3"
+                      >
+                        <path
+                          d="M16.064 4.26648H4.3317C3.66493 4.26648 3.02546 4.53618 2.55398 5.01625C2.0825 5.49632 1.81763 6.14743 1.81763 6.82635V13.6527C1.81763 14.3316 2.0825 14.9827 2.55398 15.4628C3.02546 15.9429 3.66493 16.2126 4.3317 16.2126H16.064C16.7308 16.2126 17.3703 15.9429 17.8418 15.4628C18.3132 14.9827 18.5781 14.3316 18.5781 13.6527V6.82635C18.5781 6.14743 18.3132 5.49632 17.8418 5.01625C17.3703 4.53618 16.7308 4.26648 16.064 4.26648ZM3.49368 6.82635C3.49368 6.60005 3.58197 6.38301 3.73913 6.22299C3.89629 6.06296 4.10944 5.97306 4.3317 5.97306H16.064C16.2863 5.97306 16.4995 6.06296 16.6566 6.22299C16.8138 6.38301 16.9021 6.60005 16.9021 6.82635V7.67965H3.49368V6.82635ZM16.9021 13.6527C16.9021 13.879 16.8138 14.096 16.6566 14.2561C16.4995 14.4161 16.2863 14.506 16.064 14.506H4.3317C4.10944 14.506 3.89629 14.4161 3.73913 14.2561C3.58197 14.096 3.49368 13.879 3.49368 13.6527V9.38623H16.9021V13.6527Z"
+                        />
+                        <path
+                          d="M6.0077 12.7994H9.3598C9.58206 12.7994 9.79521 12.7095 9.95237 12.5494C10.1095 12.3894 10.1978 12.1724 10.1978 11.9461C10.1978 11.7198 10.1095 11.5027 9.95237 11.3427C9.79521 11.1827 9.58206 11.0928 9.3598 11.0928H6.0077C5.78544 11.0928 5.57229 11.1827 5.41513 11.3427C5.25797 11.5027 5.16968 11.7198 5.16968 11.9461C5.16968 12.1724 5.25797 12.3894 5.41513 12.5494C5.57229 12.7095 5.78544 12.7994 6.0077 12.7994Z"
+                        />
+                        <path
+                          d="M12.712 12.7994H14.3881C14.6104 12.7994 14.8235 12.7095 14.9807 12.5494C15.1378 12.3894 15.2261 12.1724 15.2261 11.9461C15.2261 11.7198 15.1378 11.5027 14.9807 11.3427C14.8235 11.1827 14.6104 11.0928 14.3881 11.0928H12.712C12.4898 11.0928 12.2766 11.1827 12.1195 11.3427C11.9623 11.5027 11.874 11.7198 11.874 11.9461C11.874 12.1724 11.9623 12.3894 12.1195 12.5494C12.2766 12.7095 12.4898 12.7994 12.712 12.7994Z"
+                        />
+                      </svg>
+                      <input
+                        placeholder="1212  1212  1212  1212"
+                        id="input-cc-number"
+                        class="rounded-lg border px-5 py-3 w-full pl-14"
+                      />
+                    </div>
+                    <div>
+                      <ul class="flex items-center gap-2 mt-4">
+                        <li>
+                          <img src="/assets/img/payments/Amex.svg" alt="Amex" />
+                        </li>
+                        <li>
+                          <img src="/assets/img/payments/Visa.svg" alt="Visa" />
+                        </li>
+                        <li>
+                          <img
+                            src="/assets/img/payments/Mastercard.svg"
+                            alt="Mastercard"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm mb-2">CVC/CVV</label>
+                    <div class="relative">
+                      <svg
+                        width="21"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        fill="currentColor"
+                        class="absolute top-1/2 -translate-y-1/2 left-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.9813 6.66663H14.1337V5.09163C14.1337 4.20758 13.7765 3.35973 13.1407 2.73461C12.5048 2.10949 11.6425 1.7583 10.7433 1.7583C9.84415 1.7583 8.98181 2.10949 8.34599 2.73461C7.71018 3.35973 7.35299 4.20758 7.35299 5.09163V6.66663H6.5054C5.83102 6.66663 5.18426 6.93003 4.7074 7.39887C4.23054 7.86771 3.96265 8.50359 3.96265 9.16663V15.8333C3.96265 16.4963 4.23054 17.1322 4.7074 17.6011C5.18426 18.0699 5.83102 18.3333 6.5054 18.3333H14.9813C15.6556 18.3333 16.3024 18.0699 16.7793 17.6011C17.2561 17.1322 17.524 16.4963 17.524 15.8333V9.16663C17.524 8.50359 17.2561 7.86771 16.7793 7.39887C16.3024 6.93003 15.6556 6.66663 14.9813 6.66663ZM9.04816 5.09163C9.03676 4.63771 9.20873 4.19784 9.52643 3.8683C9.84414 3.53876 10.2817 3.34639 10.7433 3.3333C11.205 3.34639 11.6425 3.53876 11.9602 3.8683C12.2779 4.19784 12.4499 4.63771 12.4385 5.09163V6.66663H9.04816V5.09163ZM15.8288 15.8333C15.8288 16.0543 15.7395 16.2663 15.5806 16.4226C15.4216 16.5788 15.206 16.6666 14.9813 16.6666H6.5054C6.28061 16.6666 6.06502 16.5788 5.90607 16.4226C5.74712 16.2663 5.65782 16.0543 5.65782 15.8333V9.16663C5.65782 8.94562 5.74712 8.73366 5.90607 8.57738C6.06502 8.4211 6.28061 8.3333 6.5054 8.3333H14.9813C15.206 8.3333 15.4216 8.4211 15.5806 8.57738C15.7395 8.73366 15.8288 8.94562 15.8288 9.16663V15.8333Z"
+                        />
+                        <path
+                          d="M10.7437 10C10.2408 10 9.74916 10.1466 9.33101 10.4213C8.91285 10.696 8.58694 11.0865 8.39448 11.5433C8.20203 12.0001 8.15167 12.5028 8.24979 12.9877C8.3479 13.4727 8.59007 13.9181 8.94568 14.2678C9.3013 14.6174 9.75437 14.8555 10.2476 14.952C10.7409 15.0484 11.2521 14.9989 11.7168 14.8097C12.1814 14.6205 12.5785 14.3 12.8579 13.8889C13.1373 13.4778 13.2864 12.9945 13.2864 12.5C13.2864 11.837 13.0185 11.2011 12.5417 10.7322C12.0648 10.2634 11.4181 10 10.7437 10ZM10.7437 13.3333C10.576 13.3333 10.4122 13.2845 10.2728 13.1929C10.1334 13.1013 10.0248 12.9712 9.96062 12.8189C9.89647 12.6666 9.87968 12.4991 9.91239 12.3374C9.94509 12.1758 10.0258 12.0273 10.1444 11.9107C10.2629 11.7942 10.4139 11.7148 10.5783 11.6827C10.7427 11.6505 10.9132 11.667 11.068 11.7301C11.2229 11.7932 11.3553 11.9 11.4484 12.037C11.5416 12.1741 11.5913 12.3352 11.5913 12.5C11.5913 12.721 11.502 12.933 11.343 13.0893C11.1841 13.2455 10.9685 13.3333 10.7437 13.3333Z"
+                        />
+                      </svg>
+
+                      <input
+                        placeholder="CVC"
+                        id="input-cc-cvc"
+                        class="rounded-lg border px-5 py-3 w-full pl-14"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm mb-2">Expiration Date</label>
+                    <div class="relative">
+                      <svg
+                        width="23"
+                        height="20"
+                        viewBox="0 0 23 20"
+                        fill="currentColor"
+                        class="absolute top-1/2 -translate-y-1/2 left-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.7357 3.33329H15.809V2.49996C15.809 2.27895 15.7113 2.06698 15.5375 1.9107C15.3637 1.75442 15.128 1.66663 14.8822 1.66663C14.6364 1.66663 14.4007 1.75442 14.2269 1.9107C14.0531 2.06698 13.9554 2.27895 13.9554 2.49996V3.33329H8.39483V2.49996C8.39483 2.27895 8.29719 2.06698 8.12339 1.9107C7.94958 1.75442 7.71386 1.66663 7.46806 1.66663C7.22227 1.66663 6.98654 1.75442 6.81274 1.9107C6.63894 2.06698 6.5413 2.27895 6.5413 2.49996V3.33329H5.61453C4.87715 3.33329 4.16997 3.59668 3.64856 4.06553C3.12715 4.53437 2.83423 5.17025 2.83423 5.83329V15.8333C2.83423 16.4963 3.12715 17.1322 3.64856 17.6011C4.16997 18.0699 4.87715 18.3333 5.61453 18.3333H16.7357C17.4731 18.3333 18.1803 18.0699 18.7017 17.6011C19.2231 17.1322 19.516 16.4963 19.516 15.8333V5.83329C19.516 5.17025 19.2231 4.53437 18.7017 4.06553C18.1803 3.59668 17.4731 3.33329 16.7357 3.33329ZM5.61453 4.99996H6.5413V5.83329C6.5413 6.05431 6.63894 6.26627 6.81274 6.42255C6.98654 6.57883 7.22227 6.66663 7.46806 6.66663C7.71386 6.66663 7.94958 6.57883 8.12339 6.42255C8.29719 6.26627 8.39483 6.05431 8.39483 5.83329V4.99996H13.9554V5.83329C13.9554 6.05431 14.0531 6.26627 14.2269 6.42255C14.4007 6.57883 14.6364 6.66663 14.8822 6.66663C15.128 6.66663 15.3637 6.57883 15.5375 6.42255C15.7113 6.26627 15.809 6.05431 15.809 5.83329V4.99996H16.7357C16.9815 4.99996 17.2173 5.08776 17.3911 5.24404C17.5649 5.40032 17.6625 5.61228 17.6625 5.83329V9.16663H4.68776V5.83329C4.68776 5.61228 4.7854 5.40032 4.95921 5.24404C5.13301 5.08776 5.36874 4.99996 5.61453 4.99996ZM16.7357 16.6666H5.61453C5.36874 16.6666 5.13301 16.5788 4.95921 16.4225C4.7854 16.2663 4.68776 16.0543 4.68776 15.8333V10.8333H17.6625V15.8333C17.6625 16.0543 17.5649 16.2663 17.3911 16.4225C17.2173 16.5788 16.9815 16.6666 16.7357 16.6666Z"
+                        />
+                        <path
+                          d="M7.46827 14.1665C7.98011 14.1665 8.39504 13.7934 8.39504 13.3332C8.39504 12.873 7.98011 12.4999 7.46827 12.4999C6.95643 12.4999 6.5415 12.873 6.5415 13.3332C6.5415 13.7934 6.95643 14.1665 7.46827 14.1665Z"
+                        />
+                        <path
+                          d="M14.8824 12.4999H11.1753C10.9295 12.4999 10.6938 12.5877 10.52 12.744C10.3462 12.9002 10.2485 13.1122 10.2485 13.3332C10.2485 13.5542 10.3462 13.7662 10.52 13.9225C10.6938 14.0787 10.9295 14.1665 11.1753 14.1665H14.8824C15.1282 14.1665 15.3639 14.0787 15.5377 13.9225C15.7115 13.7662 15.8091 13.5542 15.8091 13.3332C15.8091 13.1122 15.7115 12.9002 15.5377 12.744C15.3639 12.5877 15.1282 12.4999 14.8824 12.4999Z"
+                        />
+                      </svg>
+
+                      <input
+                        placeholder="MM/YY"
+                        id="input-cc-expiration"
+                        class="rounded-lg border px-5 py-3 w-full pl-14"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="receipt mt-4">
+                <div
+                  class="receipt-inner bg-[#f1f3f8] rounded-t-lg font-medium p-6"
+                >
+                  <div class="mb-2">Order Summary</div>
+                  <div class="flex items-center justify-between">
+                    <div>Total</div>
+                    <div>$99</div>
+                  </div>
+                </div>
+                <div class="receipt-bottom"></div>
+              </div>
+
+              <div>
+                <button
+                  class="toggle-menu-signup rounded-lg bg-brand-accent text-white block p-4 mt-6 text-center mx-auto w-full max-w-[300px]"
+                >
+                  Subscribe now
+                </button>
+              </div>
+
+              <div class="text-center mt-6 text-brand-body1 text-sm">
+                <div class="mb-4 font-inter max-w-[300px] mx-auto font-light">
+                  By clicking Subscribe you are agreeing to our
+                  <a>Terms & Conditions</a> and our <a>Privacy Policy</a>
+                </div>
+                <div>
+                  Already have an account?
+                  <a href="#" class="text-brand-accent font-semibold underline"
+                    >Login</a
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="flex justify-center mt-10">
+            <img
+              src="/assets/img/logo/logo-text-black.svg"
+              alt="YAYImages Logo"
+              class="hidden md:block"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
