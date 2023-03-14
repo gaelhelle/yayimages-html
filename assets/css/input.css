@@ -67,11 +67,15 @@ body {
 }
 
 .typography-h5 {
-  @apply text-xl font-medium capitalize;
+  @apply font-medium capitalize;
 }
 
 .typography-subtitle-1 {
   @apply font-inter text-xl;
+}
+
+.typography-subtitle-2 {
+  @apply font-inter text-sm text-brand-body1;
 }
 
 .typography-body-5 {
@@ -83,6 +87,20 @@ body {
 }
 .text-gradient-2 {
   /* @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3532D1] via-[#943685] to-[#F13A3A]; */
+}
+
+.radio-indicator {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #666666;
+}
+
+label.active .radio-indicator {
+  background: #3a4df1;
+  box-shadow: 0 0 0 2px #3a4df1;
 }
 
 .aside-filters {
@@ -166,12 +184,6 @@ input {
   background: #d9d9d9 center center/cover;
 }
 
-@media only screen and (max-width: md) {
-  .typography-h3 {
-    @apply text-2xl;
-  }
-}
-
 @media screen(md) {
   .home {
     background-position: center -95px;
@@ -185,6 +197,14 @@ input {
 
   .scrolled-container .scrolled-inner {
     padding-left: calc(50vw - (var(--container-width) / 2 - 2rem));
+  }
+
+  .typography-h5 {
+    @apply text-xl;
+  }
+
+  .typography-subtitle-2 {
+    @apply text-lg;
   }
 }
 

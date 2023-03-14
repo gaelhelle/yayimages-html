@@ -207,6 +207,30 @@ for (const buttonMenuSignup of buttonsMenuSignup) {
   buttonMenuSignup.addEventListener("click", handleToggleMenuSignup);
 }
 
+const handleInputRadioChange = (event) => {
+  const radioId = event.currentTarget.id;
+  const radioName = event.currentTarget.name;
+  const checked = event.currentTarget.checked;
+
+  const radioGroupItems = document.querySelectorAll(
+    `input[type='radio'][name='${radioName}']`
+  );
+
+  for (const radioGroupItem of radioGroupItems) {
+    radioGroupItem.parentElement
+      .querySelector("label")
+      .classList.remove("active");
+  }
+  if (checked) {
+    document.querySelector(`label[for="${radioId}"]`).classList.add("active");
+  }
+};
+
+const inputRadios = document.querySelectorAll("input[type='radio']");
+for (const inputRadio of inputRadios) {
+  inputRadio.addEventListener("change", handleInputRadioChange);
+}
+
 const init = () => {
   loadMobile();
   windowResize();
